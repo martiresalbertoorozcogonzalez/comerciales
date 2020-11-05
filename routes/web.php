@@ -25,5 +25,9 @@ Route::group(['middleware' =>[ 'auth','verified']], function () {
     Route::get('/comercial/create','ComercialController@create')->name('comercial.create');
     Route::get('/comercial/edit','ComercialController@edit')->name('comercial.edit');
 
+    //Ruta para guardar imagenes en el store
+    Route::post('/imagenes/store','ImagenController@store')->name('imagenes.store');
+    Route::post('/imagenes/destroy','ImagenController@destroy')->name('imagenes.destroy');
+
 });
 
