@@ -17,9 +17,14 @@
 
       <div class="mt-5 row justify-content-center">
 
-      <form action=""
-            class="col-md-9 col-xs-12 card card-body"
+      <form
+        class="col-md-9 col-xs-12 card card-body"
+        action="{{route('comercial.store')}}"
+        method="POST"
+        enctype="multipart/form-data"
       >
+
+      @csrf
 
        <fieldset class="border p-4">
            <legend class="text-primary">Nombre , Categoria e Imagen</legend>
@@ -95,6 +100,7 @@
             type="text"
             class="form-control"
             placeholder="Calle Comercial o Establecimiento"
+            name="nombre"
             >
 
             <a href="" class="text-secondary mt-5 mb-3 text-center">EL assitente colocara una direccion estimada , o coloca el Pin en el lugar correcto</a>
@@ -114,6 +120,7 @@
                   class="form-control @error('direccion') is-invalid @enderror"
                   placeholder="Direccion"
                   value="{{old('direccion')}}"
+                  name="direccion"
                 >
                 @error('direccion')
                 <div class="invalid-feedback">
@@ -130,6 +137,7 @@
                   class="form-control @error('colonia') is-invalid @enderror"
                   placeholder="Colonia"
                   value="{{old('colonia')}}"
+                  name="colonia"
                 >
                 @error('colonia')
                 <div class="invalid-feedback">
@@ -147,7 +155,7 @@
     <fieldset class="border p-4 mt-5">
         <legend  class="text-primary">Información Establecimiento: </legend>
             <div class="form-group">
-                <label for="nombre">Teléfono</label>
+                <label for="telefono">Teléfono</label>
                 <input
                     type="tel"
                     class="form-control @error('telefono')  is-invalid  @enderror"
@@ -167,7 +175,7 @@
 
 
             <div class="form-group">
-                <label for="nombre">Descripción</label>
+                <label for="descripcion">Descripción</label>
                 <textarea
                     class="form-control  @error('descripcion')  is-invalid  @enderror"
                     name="descripcion"
@@ -181,7 +189,7 @@
             </div>
 
             <div class="form-group">
-                <label for="nombre">Hora Apertura:</label>
+                <label for="apertura">Hora Apertura:</label>
                 <input
                     type="time"
                     class="form-control @error('apertura')  is-invalid  @enderror"

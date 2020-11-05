@@ -28,7 +28,23 @@ class ComercialController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //Validacion
+        $data = $request->validate([
+           'nombre' => 'required',
+           'categoria_id' => 'required|exists:App\Categpria,id',
+           'imagen_principal' => 'required|image|1000',
+           'direccion' => 'required',
+           'colonia' => 'required',
+           'lat' => 'required',
+           'lng' => 'required',
+           'telefono' => 'required|numeric',
+           'descripcion' => 'required|min:50',
+           'apertura' => 'date_format:H:1',
+           'cierre' => 'date_format:H:1|after:apertura',
+           'uuid' => 'required|uuid'
+        ]);
+
+        dd("Desde store");
     }
 
     /**
