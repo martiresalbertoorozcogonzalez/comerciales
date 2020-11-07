@@ -3,8 +3,8 @@ if (document.querySelector('#mapa')) {
 
     document.addEventListener('DOMContentLoaded', () => {
 
-        const lat = 14.6263757;
-        const lng = -90.5626015;
+        const lat = document.querySelector('#lat').value === '' ? 14.6263757 : document.querySelector('#lat').value;
+        const lng = document.querySelector('#lng').value === '' ? -90.5626015 : document.querySelector('#lng').value;
 
         const mapa = L.map('mapa').setView([lat, lng], 16);
 

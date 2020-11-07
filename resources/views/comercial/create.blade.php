@@ -17,14 +17,9 @@
 
       <div class="mt-5 row justify-content-center">
 
-      <form
-        class="col-md-9 col-xs-12 card card-body"
-        action="{{route('comercial.store')}}"
-        method="POST"
-        enctype="multipart/form-data"
-      >
+      <form class="col-md-9 col-xs-12 card card-body" action="{{route('comercial.store')}}" method="POST" enctype="multipart/form-data" novalidate>
 
-      @csrf
+         @csrf
 
        <fieldset class="border p-4">
            <legend class="text-primary">Nombre , Categoria e Imagen</legend>
@@ -54,7 +49,7 @@
               <select
                 class="form-control @error('categoria_id') is-invalid @enderror"
                 name="categoria_id"
-                id="categoria"
+                id="categoria_id"
               >
                 <option value="" selected disabled>-- Seleccione --</option>
 
@@ -96,11 +91,9 @@
         <div class="form-group">
             <label for="nombre">Direccio del Establecimiento</label>
             <input
-            id="nombre"
             type="text"
             class="form-control"
             placeholder="Calle Comercial o Establecimiento"
-            name="nombre"
             >
 
             <a href="" class="text-secondary mt-5 mb-3 text-center">EL assitente colocara una direccion estimada , o coloca el Pin en el lugar correcto</a>
@@ -113,7 +106,6 @@
         <p class="informacion">Confirma que los siguientes campos son correctos</p>
 
         <div class="form-group">
-            <label for="direccion"></label>
                 <input
                   type="text"
                   id="direccion"
@@ -130,7 +122,6 @@
         </div>
 
         <div class="form-group">
-            <label for="colonia"></label>
                 <input
                   type="text"
                   id="colonia"

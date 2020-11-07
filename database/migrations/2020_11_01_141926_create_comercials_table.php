@@ -25,9 +25,8 @@ class CreateComercialsTable extends Migration
         Schema::create('comercials', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->foreignId('categoria_id')->constrained();
             $table->string('imagen_principal');
-            $table->string('direccio');
+            $table->string('direccion');
             $table->string('colonia');
             $table->string('lat');
             $table->string('lng');
@@ -36,6 +35,7 @@ class CreateComercialsTable extends Migration
             $table->time('apertura');
             $table->time('cierre');
             $table->uuid('uuid');
+            $table->foreignId('categoria_id')->constrained();
             $table->foreignId('user_id')->constrained();
 
             $table->timestamps();
