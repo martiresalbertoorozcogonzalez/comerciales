@@ -28,16 +28,16 @@
 
 <script>
 export default {
-    data: function () {
-      return {
-          restaurantes: []
-      }
-    },
     mounted() {
       axios.get('/api/categorias/restaurant')
          .then(respuesta => {
-             this.restaurantes = respuesta.data;
+             this.$store.commit("AGREGAR_RESTAURANTES",respuesta.data);
          })
+    },
+    computed: {
+        restaurantes(){
+         return this.$store.state.restaurantes;
+       }
     }
 }
 </script>
