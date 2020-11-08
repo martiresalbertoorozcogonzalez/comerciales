@@ -16,7 +16,11 @@
                          <span class="font-weight-bold">Horario:</span>
                          {{restaurant.apertura}}  -  {{restaurant.cierre}}
                      </p>
-                     <a class="btn btn-primary d-block">Ver Lugar</a>
+
+                    <router-link :to="{name:'comercial', params: { id: restaurant.id }}">
+                      <a class="btn btn-primary d-block">Ver Lugar</a>
+                    </router-link>
+
                  </div>
              </div>
 
