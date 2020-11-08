@@ -16,7 +16,7 @@ class APIController extends Controller
 
     public function categoria(Categoria $categoria)
     {
-        $comerciales = Comercial::where('categoria_id', $categoria->id)->with('categoria')->get();
+        $comerciales = Comercial::where('categoria_id', $categoria->id)->with('categoria')->take(3)->get();
         return response()->json($comerciales);
     }
 
