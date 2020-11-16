@@ -20,6 +20,7 @@ const router = new VueRouter({
     routes
 });
 
+
 Vue.use(VueRouter);
 
 export default router;

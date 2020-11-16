@@ -19,6 +19,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 //Listado de API
+
+Route::get('/comerciales', 'APIController@index')->name('comerciales.index');
 Route::get('/comerciales/{comercial}','APIController@show')->name('comerciales.show');
 
 Route::get('categorias','APIController@categorias')->name('categorias');

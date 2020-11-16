@@ -4,10 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Categoria;
 use App\Comercial;
+use App\Imagen;
 use Illuminate\Http\Request;
 
 class APIController extends Controller
 {
+
+    //Metodo para obtener todos los comerciales o establecimientos
+    public function index()
+    {
+      $comerciales = Comercial::all();
+
+      return response()->json($comerciales);
+    }
+
     //Metodo para  todas las categorias
     public function categorias()
     {
@@ -25,7 +35,12 @@ class APIController extends Controller
     //Muestra un comercial en especifico
     public function show(Comercial $comercial)
     {
+
+      $imagenes = Imagen::where('id_establecimiento', $comercial->uuid)->get();
+      $comercial->imagenes = $imagenes;
+
       return response()->json($comercial);
+
     }
 
 }
