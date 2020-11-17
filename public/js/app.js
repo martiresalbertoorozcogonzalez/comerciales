@@ -2802,6 +2802,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2815,17 +2820,44 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       zoom: 13,
-      center: Object(leaflet__WEBPACK_IMPORTED_MODULE_0__["latLng"])(20.666332695977, -103.392177745699),
+      center: Object(leaflet__WEBPACK_IMPORTED_MODULE_0__["latLng"])(14.6392565, -90.5129618),
       url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
       attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
       currentZoom: 11.5,
-      currentCenter: Object(leaflet__WEBPACK_IMPORTED_MODULE_0__["latLng"])(20.666332695977, -103.392177745699),
+      currentCenter: Object(leaflet__WEBPACK_IMPORTED_MODULE_0__["latLng"])(14.6392565, -90.5129618),
       showParagraph: false,
       mapOptions: {
         zoomSnap: 0.5
       },
       showMap: true
     };
+  },
+  created: function created() {
+    var _this = this;
+
+    axios.get('/api/comerciales').then(function (respuesta) {
+      _this.$store.commit('AGREGAR_COMERCIALES', respuesta.data);
+    });
+  },
+  computed: {
+    comerciales: function comerciales() {
+      return this.$store.getters.obtenerComerciales;
+    }
+  },
+  methods: {
+    obtenerCordenadas: function obtenerCordenadas(comerciales) {
+      return {
+        lat: comerciales.lat,
+        lng: comerciales.lng
+      };
+    },
+    iconoComercial: function iconoComercial(comerciales) {
+      var slug = comerciales.categoria.slug;
+      return L.icon({
+        iconUrl: "images/iconos/".concat(slug, ".png"),
+        iconSize: [40, 50]
+      });
+    }
   }
 });
 
@@ -53898,9 +53930,32 @@ var render = function() {
             attrs: { url: _vm.url, attribution: _vm.attribution }
           }),
           _vm._v(" "),
-          _c("l-marker", [_c("l-tooltip")], 1)
+          _vm._l(_vm.comerciales, function(comercial) {
+            return _c(
+              "l-marker",
+              {
+                key: comercial.id,
+                attrs: {
+                  "lat-lng": _vm.obtenerCordenadas(comercial),
+                  icon: _vm.iconoComercial(comercial)
+                }
+              },
+              [
+                _c("l-tooltip", [
+                  _vm._v(
+                    "\n               " +
+                      _vm._s(comercial.nombre) +
+                      " - " +
+                      _vm._s(comercial.categoria.nombre) +
+                      "\n            "
+                  )
+                ])
+              ],
+              1
+            )
+          })
         ],
-        1
+        2
       )
     ],
     1
@@ -84152,7 +84207,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
     restaurantes: [],
     hoteles: [],
     hospitales: [],
-    comercial: {}
+    comercial: {},
+    comerciales: []
   },
   mutations: {
     AGREGAR_CAFES: function AGREGAR_CAFES(state, cafes) {
@@ -84169,6 +84225,9 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
     },
     AGREGAR_HOSPITALES: function AGREGAR_HOSPITALES(state, hospitales) {
       state.hospitales = hospitales;
+    },
+    AGREGAR_COMERCIALES: function AGREGAR_COMERCIALES(state, comerciales) {
+      state.comerciales = comerciales;
     }
   },
   getters: {
@@ -84177,6 +84236,9 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
     },
     obtenerImagenes: function obtenerImagenes(state) {
       return state.comercial.imagenes;
+    },
+    obtenerComerciales: function obtenerComerciales(state) {
+      return state.comerciales;
     }
   }
 }));

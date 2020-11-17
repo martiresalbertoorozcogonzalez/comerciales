@@ -13,7 +13,7 @@ class APIController extends Controller
     //Metodo para obtener todos los comerciales o establecimientos
     public function index()
     {
-      $comerciales = Comercial::all();
+      $comerciales = Comercial::with('categoria')->get();
 
       return response()->json($comerciales);
     }
