@@ -12,6 +12,7 @@
           v-bind:key="comercial.id"
           :lat-lng="obtenerCordenadas(comercial)"
           :icon="iconoComercial(comercial)"
+          @click="redireccionar(comercial.id)"
         >
             <l-tooltip>
                {{ comercial.nombre}} - {{ comercial.categoria.nombre }}
@@ -54,7 +55,7 @@ export default {
       axios.get('/api/comerciales')
           .then(respuesta => {
              this.$store.commit('AGREGAR_COMERCIALES', respuesta.data);
-          })
+        })
    },
    computed: {
        comerciales() {
@@ -74,9 +75,19 @@ export default {
                iconUrl: `images/iconos/${slug}.png`,
                iconSize: [40,50]
            })
+       },
+       redireccionar(id) {
+         this.$router.push({name:'comercial', params: { id }})
        }
-
-   }
+   },
+   watch: {
+        "$store.state.categoria": function() {
+          axios.get('/api/' + this.$store.getters.obtenerCategoria)
+               .then(respuesta => {
+                   this.$store.commit('AGREGAR_COMERCIALES',respuesta.data);
+               })
+        }
+    },
 }
 </script>
 

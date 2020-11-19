@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import VuePageTransition from 'vue-page-transition';
 import InicioComercial  from '../components/InicioComercial';
 import MostrarComercial from '../components/MostrarComercial';
 
@@ -22,5 +23,6 @@ const router = new VueRouter({
 
 
 Vue.use(VueRouter);
+Vue.use(VuePageTransition);
 
 export default router;

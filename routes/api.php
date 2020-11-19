@@ -25,3 +25,4 @@ Route::get('/comerciales/{comercial}','APIController@show')->name('comerciales.s
 
 Route::get('categorias','APIController@categorias')->name('categorias');
 Route::get('categorias/{categoria}','APIController@categoria')->name('categoria');
+Route::get('/{categoria}','APIController@comercialescategoria')->name('categoria');
