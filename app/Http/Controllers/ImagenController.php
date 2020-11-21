@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Imagen;
+use App\Comercial;
+use Illuminate\Auth\Middleware\Authorize;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Intervention\Image\Facades\Image;
@@ -39,20 +41,30 @@ class ImagenController extends Controller
     public function destroy(Request $request)
     {
 
+       // Validacion
+       $uuid = $request->get('uuid');
+       $comercial = Comercial::where('uuid', $uuid)->first();
+       $this->authorize('delete', $comercial);
+
+       //Imagen a eliminar
        $imagen = $request->get('imagen');
 
        if (File::exists('storage/'. $imagen)) {
+           //Elimina imagen del servidor
            File::delete('storage/'. $imagen);
-       }
 
-        //Retornar respuesta
-        $respuesta = [
-          'mensaje' => 'Imagen Eliminada',
-          'imagen' => $imagen
-        ];
+           //elimina imagen de la BD
+           Imagen::where('ruta_imagen', $imagen )->delete();
 
-        $imagenEliminar = Imagen::where('ruta_imagen', '=' ,$imagen)->firstOrFail();
-        Imagen::destroy($imagenEliminar->id);
+           //Retornar respuesta
+            $respuesta = [
+                'mensaje' => 'Imagen Eliminada',
+                'imagen' => $imagen,
+            ];
+
+        }
+
+
 
         return response()->json($respuesta);
     }

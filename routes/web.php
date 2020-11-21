@@ -17,12 +17,12 @@ Route::get('/','InicioController')->name('inicio');
 
 Auth::routes(['verify' => true]);
 
-
 Route::group(['middleware' =>[ 'auth','verified']], function () {
 
-    Route::get('/comercial/create','ComercialController@create')->name('comercial.create');
+    Route::get('/comercial/create','ComercialController@create')->name('comercial.create')->middleware('revisar');
     Route::post('/comercial','ComercialController@store')->name('comercial.store');
     Route::get('/comercial/edit','ComercialController@edit')->name('comercial.edit');
+    Route::put('/comercial/{comercial}','ComercialController@update')->name('comercial.update');
 
     //Ruta para guardar imagenes en el store
     Route::post('/imagenes/store','ImagenController@store')->name('imagenes.store');

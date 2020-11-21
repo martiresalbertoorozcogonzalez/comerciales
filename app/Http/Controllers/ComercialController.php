@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Categoria;
 use App\Comercial;
+use App\Imagen;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
+use Intervention\Image\Gd\Commands\BackupCommand;
 
 class ComercialController extends Controller
 {
@@ -90,7 +92,18 @@ class ComercialController extends Controller
      */
     public function edit(Comercial $comercial)
     {
-        return "Desde edit";
+        //Consuktar categorias
+        $categorias = Categoria::all();
+
+        //Obtener los comerciales
+        $comercial = auth()->user()->comercial;
+        $comercial->apertura = date('H:i', strtotime($comercial->apertura));
+        $comercial->cierre = date('H:i', strtotime($comercial->cierre));
+
+        //Obtiene las imagenes del comercial o establecimiento
+        $imagenes = Imagen::where('id_establecimiento', $comercial->uuid)->get();
+
+        return view('comercial.edit',compact('categorias','comercial','imagenes'));
     }
 
     /**
@@ -102,7 +115,54 @@ class ComercialController extends Controller
      */
     public function update(Request $request, Comercial $comercial)
     {
-        //
+                //Ejecutar Policy
+                $this->authorize('update', $comercial);
+                //Validacion
+                $data = $request->validate([
+                    'nombre' => 'required',
+                    'categoria_id' => 'required|exists:App\Categoria,id',
+                    'imagen_principal' => 'image|max:1000',
+                    'direccion' => 'required',
+                    'colonia' => 'required',
+                    'lat' => 'required',
+                    'lng' => 'required',
+                    'telefono' => 'required|numeric',
+                    'descripcion' => 'required|min:50',
+                    'apertura' => 'date_format:H:i',
+                    'cierre' => 'date_format:H:i|after:apertura',
+                    'uuid' => 'required|uuid'
+                 ]);
+
+                 $comercial->nombre = $data['nombre'];
+                 $comercial->categoria_id = $data['categoria_id'];
+                 $comercial->direccion = $data['direccion'];
+                 $comercial->colonia = $data['colonia'];
+                 $comercial->lat = $data['lat'];
+                 $comercial->lng = $data['lng'];
+                 $comercial->telefono = $data['telefono'];
+                 $comercial->descripcion = $data['descripcion'];
+                 $comercial->apertura = $data['apertura'];
+                 $comercial->cierre = $data['cierre'];
+                 $comercial->uuid = $data['uuid'];
+
+                 //Si el usuario sube una imagen
+                 if (request('imagen_principal')) {
+                     //Guardar la imagen
+                    $ruta_imagen = $request['imagen_principal']->store('principales','public');
+
+                    // Rezise a la imagen
+                    $img = Image::make(public_path("storage/{$ruta_imagen}") )->fit(800,600);
+                    $img->save();
+
+                    $comercial->imagen_principal = $ruta_imagen;
+
+                 }
+
+                 $comercial->save();
+
+                 //Mensaje al usuario
+                 return back()->with('estado','Tu informacion se almaceno correctamente');
+
     }
 
     /**
