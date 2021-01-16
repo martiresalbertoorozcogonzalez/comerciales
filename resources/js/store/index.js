@@ -5,30 +5,18 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
    state: {
-     cafes: [],
-     restaurantes:[],
-     hoteles:[],
-     hospitales:[],
+     cabezales: [],
      comercial:{},
      comerciales:[],
      categorias:[],
-     categoria:''
+     categoria:'',
    },
    mutations: {
-      AGREGAR_CAFES(state, cafes) {
-          state.cafes = cafes;
-      },
-      AGREGAR_RESTAURANTES(state, restaurantes) {
-          state.restaurantes = restaurantes;
-      },
-      AGREGAR_HOTELES(state, hoteles) {
-        state.hoteles = hoteles;
+      AGREGAR_CABEZALES(state, cabezales) {
+          state.cabezales = cabezales;
       },
       AGREGAR_COMERCIAL(state, comercial) {
         state.comercial = comercial;
-      },
-      AGREGAR_HOSPITALES(state, hospitales) {
-        state.hospitales = hospitales;
       },
       AGREGAR_COMERCIALES(state, comerciales) {
           state.comerciales = comerciales;

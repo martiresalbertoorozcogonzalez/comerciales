@@ -2459,10 +2459,10 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaCafe.vue?vue&type=script&lang=js&":
-/*!************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CategoriaCafe.vue?vue&type=script&lang=js& ***!
-  \************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaCabezales.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CategoriaCabezales.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2504,187 +2504,13 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    axios.get('/api/categorias/cafe').then(function (respuesta) {
-      _this.$store.commit("AGREGAR_CAFES", respuesta.data);
+    axios.get('/api/categorias/cabezales').then(function (respuesta) {
+      _this.$store.commit("AGREGAR_CABEZALES", respuesta.data);
     });
   },
   computed: {
-    cafes: function cafes() {
-      return this.$store.state.cafes;
-    }
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaHospital.vue?vue&type=script&lang=js&":
-/*!****************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CategoriaHospital.vue?vue&type=script&lang=js& ***!
-  \****************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    var _this = this;
-
-    axios.get('/api/categorias/hospital').then(function (respuesta) {
-      _this.$store.commit("AGREGAR_HOSPITALES", respuesta.data);
-    });
-  },
-  computed: {
-    hospitales: function hospitales() {
-      return this.$store.state.hospitales;
-    }
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaHotel.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CategoriaHotel.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    var _this = this;
-
-    axios.get('/api/categorias/hotel').then(function (respuesta) {
-      _this.$store.commit("AGREGAR_HOTELES", respuesta.data);
-    });
-  },
-  computed: {
-    hoteles: function hoteles() {
-      return this.$store.state.hoteles;
-    }
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaRestaurant.vue?vue&type=script&lang=js&":
-/*!******************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CategoriaRestaurant.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    var _this = this;
-
-    axios.get('/api/categorias/restaurant').then(function (respuesta) {
-      _this.$store.commit("AGREGAR_RESTAURANTES", respuesta.data);
-    });
-  },
-  computed: {
-    restaurantes: function restaurantes() {
-      return this.$store.state.restaurantes;
+    cabezales: function cabezales() {
+      return this.$store.state.cabezales;
     }
   }
 });
@@ -2739,11 +2565,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ListadoCategorias__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ListadoCategorias */ "./resources/js/components/ListadoCategorias.vue");
-/* harmony import */ var _MapaComerciales__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MapaComerciales */ "./resources/js/components/MapaComerciales.vue");
-/* harmony import */ var _CategoriaCafe__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CategoriaCafe */ "./resources/js/components/CategoriaCafe.vue");
-/* harmony import */ var _CategoriaRestaurant__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./CategoriaRestaurant */ "./resources/js/components/CategoriaRestaurant.vue");
-/* harmony import */ var _CategoriaHotel__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./CategoriaHotel */ "./resources/js/components/CategoriaHotel.vue");
-/* harmony import */ var _CategoriaHospital__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./CategoriaHospital */ "./resources/js/components/CategoriaHospital.vue");
+/* harmony import */ var _CategoriaCabezales__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CategoriaCabezales */ "./resources/js/components/CategoriaCabezales.vue");
 //
 //
 //
@@ -2752,24 +2574,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-
-
-
-
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     ListadoCategorias: _ListadoCategorias__WEBPACK_IMPORTED_MODULE_0__["default"],
-    CategoriaCafe: _CategoriaCafe__WEBPACK_IMPORTED_MODULE_2__["default"],
-    CategoriaRestaurant: _CategoriaRestaurant__WEBPACK_IMPORTED_MODULE_3__["default"],
-    CategoriaHotel: _CategoriaHotel__WEBPACK_IMPORTED_MODULE_4__["default"],
-    CategoriaHospital: _CategoriaHospital__WEBPACK_IMPORTED_MODULE_5__["default"],
-    MapaComerciales: _MapaComerciales__WEBPACK_IMPORTED_MODULE_1__["default"]
+    CategoriaCabezales: _CategoriaCabezales__WEBPACK_IMPORTED_MODULE_1__["default"]
   }
 });
 
@@ -2825,116 +2635,6 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       axios.get('/api/comerciales').then(function (respuesta) {
-        _this2.$store.commit('AGREGAR_COMERCIALES', respuesta.data);
-      });
-    }
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MapaComerciales.vue?vue&type=script&lang=js&":
-/*!**************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/MapaComerciales.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! leaflet */ "./node_modules/leaflet/dist/leaflet-src.js");
-/* harmony import */ var leaflet__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(leaflet__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vue2_leaflet__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue2-leaflet */ "./node_modules/vue2-leaflet/dist/vue2-leaflet.es.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    LMap: vue2_leaflet__WEBPACK_IMPORTED_MODULE_1__["LMap"],
-    LTileLayer: vue2_leaflet__WEBPACK_IMPORTED_MODULE_1__["LTileLayer"],
-    LMarker: vue2_leaflet__WEBPACK_IMPORTED_MODULE_1__["LMarker"],
-    LTooltip: vue2_leaflet__WEBPACK_IMPORTED_MODULE_1__["LTooltip"],
-    LIcon: vue2_leaflet__WEBPACK_IMPORTED_MODULE_1__["LIcon"]
-  },
-  data: function data() {
-    return {
-      zoom: 13,
-      center: Object(leaflet__WEBPACK_IMPORTED_MODULE_0__["latLng"])(14.6392565, -90.5129618),
-      url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-      currentZoom: 11.5,
-      currentCenter: Object(leaflet__WEBPACK_IMPORTED_MODULE_0__["latLng"])(14.6392565, -90.5129618),
-      showParagraph: false,
-      mapOptions: {
-        zoomSnap: 0.5
-      },
-      showMap: true
-    };
-  },
-  created: function created() {
-    var _this = this;
-
-    axios.get('/api/comerciales').then(function (respuesta) {
-      _this.$store.commit('AGREGAR_COMERCIALES', respuesta.data);
-    });
-  },
-  computed: {
-    comerciales: function comerciales() {
-      return this.$store.getters.obtenerComerciales;
-    }
-  },
-  methods: {
-    obtenerCordenadas: function obtenerCordenadas(comerciales) {
-      return {
-        lat: comerciales.lat,
-        lng: comerciales.lng
-      };
-    },
-    iconoComercial: function iconoComercial(comerciales) {
-      var slug = comerciales.categoria.slug;
-      return L.icon({
-        iconUrl: "images/iconos/".concat(slug, ".png"),
-        iconSize: [40, 50]
-      });
-    },
-    redireccionar: function redireccionar(id) {
-      this.$router.push({
-        name: 'comercial',
-        params: {
-          id: id
-        }
-      });
-    }
-  },
-  watch: {
-    "$store.state.categoria": function $storeStateCategoria() {
-      var _this2 = this;
-
-      axios.get('/api/' + this.$store.getters.obtenerCategoria).then(function (respuesta) {
         _this2.$store.commit('AGREGAR_COMERCIALES', respuesta.data);
       });
     }
@@ -7583,26 +7283,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\ndiv[data-v-39e6c9b3] {\n  background-color: #6272d4;\n}\nnav a[data-v-39e6c9b3] {\n  color: white;\n  font-weight: bold;\n  text-transform: uppercase;\n  padding: 0.5rem 2rem;\n  text-align: center;\n  flex: 1;\n}\nnav a[data-v-39e6c9b3]:hover {\n  color: white;\n  cursor: pointer;\n}\nnav a[data-v-39e6c9b3]:nth-child(1) {\n  background-color: #a000b7;\n}\nnav a[data-v-39e6c9b3]:nth-child(2) {\n  background-color: #591d03;\n}\nnav a[data-v-39e6c9b3]:nth-child(3) {\n  background-color: #ea6a00;\n}\nnav a[data-v-39e6c9b3]:nth-child(4) {\n  background-color: #edb220;\n}\nnav a[data-v-39e6c9b3]:nth-child(5) {\n  background-color: #dd0e3f;\n}\nnav a[data-v-39e6c9b3]:nth-child(6) {\n  background-color: #0448b5;\n}\nnav a[data-v-39e6c9b3]:nth-child(7) {\n  background-color: #00a81c;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MapaComerciales.vue?vue&type=style&index=0&id=7fecaf8d&scoped=true&lang=css&":
-/*!*********************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/MapaComerciales.vue?vue&type=style&index=0&id=7fecaf8d&scoped=true&lang=css& ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n.mapa[data-v-7fecaf8d] {\n    height: 600px;\n    width: 100%;\n}\n\n", ""]);
+exports.push([module.i, "\ndiv[data-v-39e6c9b3] {\n  background-color: white;\n}\nnav a[data-v-39e6c9b3] {\n  color: white;\n  font-weight: bold;\n  text-transform: uppercase;\n  padding: 0.5rem 2rem;\n  text-align: center;\n  flex: 1;\n}\nnav a[data-v-39e6c9b3]:hover {\n  color: white;\n  cursor: pointer;\n}\nnav a[data-v-39e6c9b3]:nth-child(1) {\n  background-color: #a000b7;\n}\nnav a[data-v-39e6c9b3]:nth-child(2) {\n  background-color: #591d03;\n}\nnav a[data-v-39e6c9b3]:nth-child(3) {\n  background-color: #ea6a00;\n}\nnav a[data-v-39e6c9b3]:nth-child(4) {\n  background-color: #edb220;\n}\nnav a[data-v-39e6c9b3]:nth-child(5) {\n  background-color: #dd0e3f;\n}\nnav a[data-v-39e6c9b3]:nth-child(6) {\n  background-color: #0448b5;\n}\nnav a[data-v-39e6c9b3]:nth-child(7) {\n  background-color: #00a81c;\n}\nnav a[data-v-39e6c9b3]:nth-child(8) {\n  background-color: #FFA07A;\n}\nnav a[data-v-39e6c9b3]:nth-child(9) {\n  background-color: #C95248;\n}\n\n", ""]);
 
 // exports
 
@@ -52937,36 +52618,6 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MapaComerciales.vue?vue&type=style&index=0&id=7fecaf8d&scoped=true&lang=css&":
-/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/MapaComerciales.vue?vue&type=style&index=0&id=7fecaf8d&scoped=true&lang=css& ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./MapaComerciales.vue?vue&type=style&index=0&id=7fecaf8d&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MapaComerciales.vue?vue&type=style&index=0&id=7fecaf8d&scoped=true&lang=css&");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MapaUbicacion.vue?vue&type=style&index=0&id=2411da3f&scoped=true&lang=css&":
 /*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/MapaUbicacion.vue?vue&type=style&index=0&id=2411da3f&scoped=true&lang=css& ***!
@@ -53581,10 +53232,10 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaCafe.vue?vue&type=template&id=5820e115&":
-/*!****************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CategoriaCafe.vue?vue&type=template&id=5820e115& ***!
-  \****************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaCabezales.vue?vue&type=template&id=27b22b4a&":
+/*!*********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CategoriaCabezales.vue?vue&type=template&id=27b22b4a& ***!
+  \*********************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -53597,19 +53248,19 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container my-5" }, [
-    _c("h2", [_vm._v("Cafes")]),
+    _c("h2", [_vm._v("Cabezales")]),
     _vm._v(" "),
     _c(
       "div",
       { staticClass: "row" },
-      _vm._l(this.cafes, function(cafe) {
-        return _c("div", { key: cafe.id, staticClass: "col-md-4 mt-4" }, [
+      _vm._l(this.cabezales, function(cabezal) {
+        return _c("div", { key: cabezal.id, staticClass: "col-md-4 mt-4" }, [
           _c("div", { staticClass: "card" }, [
             _c("img", {
               staticClass: "card-img-top",
               attrs: {
-                src: "storage/" + cafe.imagen_principal,
-                alt: "card del restaurante"
+                src: "storage/" + cabezal.imagen_principal,
+                alt: "card del cabezal"
               }
             }),
             _vm._v(" "),
@@ -53623,14 +53274,14 @@ var render = function() {
                   [
                     _vm._v(
                       "\n                       " +
-                        _vm._s(cafe.nombre) +
+                        _vm._s(cabezal.nombre) +
                         "\n                   "
                     )
                   ]
                 ),
                 _vm._v(" "),
                 _c("p", { staticClass: "card-text" }, [
-                  _vm._v(_vm._s(cafe.direccion))
+                  _vm._v(_vm._s(cabezal.direccion))
                 ]),
                 _vm._v(" "),
                 _c("p", { staticClass: "card-text" }, [
@@ -53639,9 +53290,9 @@ var render = function() {
                   ]),
                   _vm._v(
                     "\n                       " +
-                      _vm._s(cafe.apertura) +
+                      _vm._s(cabezal.apertura) +
                       "  -  " +
-                      _vm._s(cafe.cierre) +
+                      _vm._s(cabezal.cierre) +
                       "\n                   "
                   )
                 ]),
@@ -53650,297 +53301,12 @@ var render = function() {
                   "router-link",
                   {
                     attrs: {
-                      to: { name: "comercial", params: { id: cafe.id } }
+                      to: { name: "comercial", params: { id: cabezal.id } }
                     }
                   },
                   [
                     _c("a", { staticClass: "btn btn-primary d-block" }, [
-                      _vm._v("Ver Lugar")
-                    ])
-                  ]
-                )
-              ],
-              1
-            )
-          ])
-        ])
-      }),
-      0
-    )
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaHospital.vue?vue&type=template&id=23071f32&":
-/*!********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CategoriaHospital.vue?vue&type=template&id=23071f32& ***!
-  \********************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container my-5" }, [
-    _c("h2", [_vm._v("Hoteles")]),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "row" },
-      _vm._l(this.hospitales, function(hospital) {
-        return _c("div", { key: hospital.id, staticClass: "col-md-4 mt-4" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("img", {
-              staticClass: "card-img-top",
-              attrs: {
-                src: "storage/" + hospital.imagen_principal,
-                alt: "card del restaurante"
-              }
-            }),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "card-body" },
-              [
-                _c(
-                  "h3",
-                  { staticClass: "card-title text-primary font-weight-bold" },
-                  [
-                    _vm._v(
-                      "\n                       " +
-                        _vm._s(hospital.nombre) +
-                        "\n                   "
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c("p", { staticClass: "card-text" }, [
-                  _vm._v(_vm._s(hospital.direccion))
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "card-text" }, [
-                  _c("span", { staticClass: "font-weight-bold" }, [
-                    _vm._v("Horario:")
-                  ]),
-                  _vm._v(
-                    "\n                       " +
-                      _vm._s(hospital.apertura) +
-                      "  -  " +
-                      _vm._s(hospital.cierre) +
-                      "\n                   "
-                  )
-                ]),
-                _vm._v(" "),
-                _c(
-                  "router-link",
-                  {
-                    attrs: {
-                      to: { name: "comercial", params: { id: hospital.id } }
-                    }
-                  },
-                  [
-                    _c("a", { staticClass: "btn btn-primary d-block" }, [
-                      _vm._v("Ver Lugar")
-                    ])
-                  ]
-                )
-              ],
-              1
-            )
-          ])
-        ])
-      }),
-      0
-    )
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaHotel.vue?vue&type=template&id=27821aec&":
-/*!*****************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CategoriaHotel.vue?vue&type=template&id=27821aec& ***!
-  \*****************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container my-5" }, [
-    _c("h2", [_vm._v("Hoteles")]),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "row" },
-      _vm._l(this.hoteles, function(hotel) {
-        return _c("div", { key: hotel.id, staticClass: "col-md-4 mt-4" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("img", {
-              staticClass: "card-img-top",
-              attrs: {
-                src: "storage/" + hotel.imagen_principal,
-                alt: "card del restaurante"
-              }
-            }),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "card-body" },
-              [
-                _c(
-                  "h3",
-                  { staticClass: "card-title text-primary font-weight-bold" },
-                  [
-                    _vm._v(
-                      "\n                       " +
-                        _vm._s(hotel.nombre) +
-                        "\n                   "
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c("p", { staticClass: "card-text" }, [
-                  _vm._v(_vm._s(hotel.direccion))
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "card-text" }, [
-                  _c("span", { staticClass: "font-weight-bold" }, [
-                    _vm._v("Horario:")
-                  ]),
-                  _vm._v(
-                    "\n                       " +
-                      _vm._s(hotel.apertura) +
-                      "  -  " +
-                      _vm._s(hotel.cierre) +
-                      "\n                   "
-                  )
-                ]),
-                _vm._v(" "),
-                _c(
-                  "router-link",
-                  {
-                    attrs: {
-                      to: { name: "comercial", params: { id: hotel.id } }
-                    }
-                  },
-                  [
-                    _c("a", { staticClass: "btn btn-primary d-block" }, [
-                      _vm._v("Ver Lugar")
-                    ])
-                  ]
-                )
-              ],
-              1
-            )
-          ])
-        ])
-      }),
-      0
-    )
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaRestaurant.vue?vue&type=template&id=51dcdab5&":
-/*!**********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CategoriaRestaurant.vue?vue&type=template&id=51dcdab5& ***!
-  \**********************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container my-5" }, [
-    _c("h2", [_vm._v("restaurantes")]),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "row" },
-      _vm._l(this.restaurantes, function(restaurant) {
-        return _c("div", { key: restaurant.id, staticClass: "col-md-4 mt-4" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("img", {
-              staticClass: "card-img-top",
-              attrs: {
-                src: "storage/" + restaurant.imagen_principal,
-                alt: "card del restaurante"
-              }
-            }),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "card-body" },
-              [
-                _c(
-                  "h3",
-                  { staticClass: "card-title text-primary font-weight-bold" },
-                  [
-                    _vm._v(
-                      "\n                       " +
-                        _vm._s(restaurant.nombre) +
-                        "\n                   "
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c("p", { staticClass: "card-text" }, [
-                  _vm._v(_vm._s(restaurant.direccion))
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "card-text" }, [
-                  _c("span", { staticClass: "font-weight-bold" }, [
-                    _vm._v("Horario:")
-                  ]),
-                  _vm._v(
-                    "\n                       " +
-                      _vm._s(restaurant.apertura) +
-                      "  -  " +
-                      _vm._s(restaurant.cierre) +
-                      "\n                   "
-                  )
-                ]),
-                _vm._v(" "),
-                _c(
-                  "router-link",
-                  {
-                    attrs: {
-                      to: { name: "comercial", params: { id: restaurant.id } }
-                    }
-                  },
-                  [
-                    _c("a", { staticClass: "btn btn-primary d-block" }, [
-                      _vm._v("Ver Lugar")
+                      _vm._v("Ver informacion completa")
                     ])
                   ]
                 )
@@ -54030,19 +53396,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    [
-      _c("listado-categorias"),
-      _vm._v(" "),
-      _c("mapa-comerciales"),
-      _vm._v(" "),
-      _c("categoria-cafe"),
-      _vm._v(" "),
-      _c("categoria-restaurant"),
-      _vm._v(" "),
-      _c("categoria-hotel"),
-      _vm._v(" "),
-      _c("categoria-hospital")
-    ],
+    [_c("listado-categorias"), _vm._v(" "), _c("categoria-cabezales")],
     1
   )
 }
@@ -54107,78 +53461,6 @@ var render = function() {
       2
     )
   ])
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MapaComerciales.vue?vue&type=template&id=7fecaf8d&scoped=true&":
-/*!******************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/MapaComerciales.vue?vue&type=template&id=7fecaf8d&scoped=true& ***!
-  \******************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "mapa" },
-    [
-      _c(
-        "l-map",
-        {
-          attrs: { zoom: _vm.zoom, center: _vm.center, options: _vm.mapOptions }
-        },
-        [
-          _c("l-tile-layer", {
-            attrs: { url: _vm.url, attribution: _vm.attribution }
-          }),
-          _vm._v(" "),
-          _vm._l(_vm.comerciales, function(comercial) {
-            return _c(
-              "l-marker",
-              {
-                key: comercial.id,
-                attrs: {
-                  "lat-lng": _vm.obtenerCordenadas(comercial),
-                  icon: _vm.iconoComercial(comercial)
-                },
-                on: {
-                  click: function($event) {
-                    return _vm.redireccionar(comercial.id)
-                  }
-                }
-              },
-              [
-                _c("l-tooltip", [
-                  _vm._v(
-                    "\n               " +
-                      _vm._s(comercial.nombre) +
-                      " - " +
-                      _vm._s(comercial.categoria.nombre) +
-                      "\n            "
-                  )
-                ])
-              ],
-              1
-            )
-          })
-        ],
-        2
-      )
-    ],
-    1
-  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -83726,17 +83008,17 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
-/***/ "./resources/js/components/CategoriaCafe.vue":
-/*!***************************************************!*\
-  !*** ./resources/js/components/CategoriaCafe.vue ***!
-  \***************************************************/
+/***/ "./resources/js/components/CategoriaCabezales.vue":
+/*!********************************************************!*\
+  !*** ./resources/js/components/CategoriaCabezales.vue ***!
+  \********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _CategoriaCafe_vue_vue_type_template_id_5820e115___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CategoriaCafe.vue?vue&type=template&id=5820e115& */ "./resources/js/components/CategoriaCafe.vue?vue&type=template&id=5820e115&");
-/* harmony import */ var _CategoriaCafe_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CategoriaCafe.vue?vue&type=script&lang=js& */ "./resources/js/components/CategoriaCafe.vue?vue&type=script&lang=js&");
+/* harmony import */ var _CategoriaCabezales_vue_vue_type_template_id_27b22b4a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CategoriaCabezales.vue?vue&type=template&id=27b22b4a& */ "./resources/js/components/CategoriaCabezales.vue?vue&type=template&id=27b22b4a&");
+/* harmony import */ var _CategoriaCabezales_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CategoriaCabezales.vue?vue&type=script&lang=js& */ "./resources/js/components/CategoriaCabezales.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -83746,9 +83028,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _CategoriaCafe_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _CategoriaCafe_vue_vue_type_template_id_5820e115___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _CategoriaCafe_vue_vue_type_template_id_5820e115___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _CategoriaCabezales_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CategoriaCabezales_vue_vue_type_template_id_27b22b4a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _CategoriaCabezales_vue_vue_type_template_id_27b22b4a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -83758,245 +83040,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/components/CategoriaCafe.vue"
+component.options.__file = "resources/js/components/CategoriaCabezales.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/components/CategoriaCafe.vue?vue&type=script&lang=js&":
-/*!****************************************************************************!*\
-  !*** ./resources/js/components/CategoriaCafe.vue?vue&type=script&lang=js& ***!
-  \****************************************************************************/
+/***/ "./resources/js/components/CategoriaCabezales.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/components/CategoriaCabezales.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaCafe_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./CategoriaCafe.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaCafe.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaCafe_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaCabezales_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./CategoriaCabezales.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaCabezales.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaCabezales_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/components/CategoriaCafe.vue?vue&type=template&id=5820e115&":
-/*!**********************************************************************************!*\
-  !*** ./resources/js/components/CategoriaCafe.vue?vue&type=template&id=5820e115& ***!
-  \**********************************************************************************/
+/***/ "./resources/js/components/CategoriaCabezales.vue?vue&type=template&id=27b22b4a&":
+/*!***************************************************************************************!*\
+  !*** ./resources/js/components/CategoriaCabezales.vue?vue&type=template&id=27b22b4a& ***!
+  \***************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaCafe_vue_vue_type_template_id_5820e115___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./CategoriaCafe.vue?vue&type=template&id=5820e115& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaCafe.vue?vue&type=template&id=5820e115&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaCafe_vue_vue_type_template_id_5820e115___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaCabezales_vue_vue_type_template_id_27b22b4a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./CategoriaCabezales.vue?vue&type=template&id=27b22b4a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaCabezales.vue?vue&type=template&id=27b22b4a&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaCabezales_vue_vue_type_template_id_27b22b4a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaCafe_vue_vue_type_template_id_5820e115___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/components/CategoriaHospital.vue":
-/*!*******************************************************!*\
-  !*** ./resources/js/components/CategoriaHospital.vue ***!
-  \*******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _CategoriaHospital_vue_vue_type_template_id_23071f32___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CategoriaHospital.vue?vue&type=template&id=23071f32& */ "./resources/js/components/CategoriaHospital.vue?vue&type=template&id=23071f32&");
-/* harmony import */ var _CategoriaHospital_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CategoriaHospital.vue?vue&type=script&lang=js& */ "./resources/js/components/CategoriaHospital.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _CategoriaHospital_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _CategoriaHospital_vue_vue_type_template_id_23071f32___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _CategoriaHospital_vue_vue_type_template_id_23071f32___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/CategoriaHospital.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/CategoriaHospital.vue?vue&type=script&lang=js&":
-/*!********************************************************************************!*\
-  !*** ./resources/js/components/CategoriaHospital.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaHospital_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./CategoriaHospital.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaHospital.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaHospital_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/CategoriaHospital.vue?vue&type=template&id=23071f32&":
-/*!**************************************************************************************!*\
-  !*** ./resources/js/components/CategoriaHospital.vue?vue&type=template&id=23071f32& ***!
-  \**************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaHospital_vue_vue_type_template_id_23071f32___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./CategoriaHospital.vue?vue&type=template&id=23071f32& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaHospital.vue?vue&type=template&id=23071f32&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaHospital_vue_vue_type_template_id_23071f32___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaHospital_vue_vue_type_template_id_23071f32___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/components/CategoriaHotel.vue":
-/*!****************************************************!*\
-  !*** ./resources/js/components/CategoriaHotel.vue ***!
-  \****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _CategoriaHotel_vue_vue_type_template_id_27821aec___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CategoriaHotel.vue?vue&type=template&id=27821aec& */ "./resources/js/components/CategoriaHotel.vue?vue&type=template&id=27821aec&");
-/* harmony import */ var _CategoriaHotel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CategoriaHotel.vue?vue&type=script&lang=js& */ "./resources/js/components/CategoriaHotel.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _CategoriaHotel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _CategoriaHotel_vue_vue_type_template_id_27821aec___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _CategoriaHotel_vue_vue_type_template_id_27821aec___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/CategoriaHotel.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/CategoriaHotel.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************!*\
-  !*** ./resources/js/components/CategoriaHotel.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaHotel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./CategoriaHotel.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaHotel.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaHotel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/CategoriaHotel.vue?vue&type=template&id=27821aec&":
-/*!***********************************************************************************!*\
-  !*** ./resources/js/components/CategoriaHotel.vue?vue&type=template&id=27821aec& ***!
-  \***********************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaHotel_vue_vue_type_template_id_27821aec___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./CategoriaHotel.vue?vue&type=template&id=27821aec& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaHotel.vue?vue&type=template&id=27821aec&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaHotel_vue_vue_type_template_id_27821aec___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaHotel_vue_vue_type_template_id_27821aec___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/components/CategoriaRestaurant.vue":
-/*!*********************************************************!*\
-  !*** ./resources/js/components/CategoriaRestaurant.vue ***!
-  \*********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _CategoriaRestaurant_vue_vue_type_template_id_51dcdab5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CategoriaRestaurant.vue?vue&type=template&id=51dcdab5& */ "./resources/js/components/CategoriaRestaurant.vue?vue&type=template&id=51dcdab5&");
-/* harmony import */ var _CategoriaRestaurant_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CategoriaRestaurant.vue?vue&type=script&lang=js& */ "./resources/js/components/CategoriaRestaurant.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _CategoriaRestaurant_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _CategoriaRestaurant_vue_vue_type_template_id_51dcdab5___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _CategoriaRestaurant_vue_vue_type_template_id_51dcdab5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/CategoriaRestaurant.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/CategoriaRestaurant.vue?vue&type=script&lang=js&":
-/*!**********************************************************************************!*\
-  !*** ./resources/js/components/CategoriaRestaurant.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaRestaurant_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./CategoriaRestaurant.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaRestaurant.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaRestaurant_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/CategoriaRestaurant.vue?vue&type=template&id=51dcdab5&":
-/*!****************************************************************************************!*\
-  !*** ./resources/js/components/CategoriaRestaurant.vue?vue&type=template&id=51dcdab5& ***!
-  \****************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaRestaurant_vue_vue_type_template_id_51dcdab5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./CategoriaRestaurant.vue?vue&type=template&id=51dcdab5& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaRestaurant.vue?vue&type=template&id=51dcdab5&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaRestaurant_vue_vue_type_template_id_51dcdab5___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaRestaurant_vue_vue_type_template_id_51dcdab5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaCabezales_vue_vue_type_template_id_27b22b4a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -84240,93 +83315,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ListadoCategorias_vue_vue_type_template_id_39e6c9b3_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ListadoCategorias_vue_vue_type_template_id_39e6c9b3_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/components/MapaComerciales.vue":
-/*!*****************************************************!*\
-  !*** ./resources/js/components/MapaComerciales.vue ***!
-  \*****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _MapaComerciales_vue_vue_type_template_id_7fecaf8d_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MapaComerciales.vue?vue&type=template&id=7fecaf8d&scoped=true& */ "./resources/js/components/MapaComerciales.vue?vue&type=template&id=7fecaf8d&scoped=true&");
-/* harmony import */ var _MapaComerciales_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MapaComerciales.vue?vue&type=script&lang=js& */ "./resources/js/components/MapaComerciales.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _MapaComerciales_vue_vue_type_style_index_0_id_7fecaf8d_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MapaComerciales.vue?vue&type=style&index=0&id=7fecaf8d&scoped=true&lang=css& */ "./resources/js/components/MapaComerciales.vue?vue&type=style&index=0&id=7fecaf8d&scoped=true&lang=css&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
-  _MapaComerciales_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _MapaComerciales_vue_vue_type_template_id_7fecaf8d_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _MapaComerciales_vue_vue_type_template_id_7fecaf8d_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  "7fecaf8d",
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/MapaComerciales.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/MapaComerciales.vue?vue&type=script&lang=js&":
-/*!******************************************************************************!*\
-  !*** ./resources/js/components/MapaComerciales.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MapaComerciales_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./MapaComerciales.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MapaComerciales.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MapaComerciales_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/MapaComerciales.vue?vue&type=style&index=0&id=7fecaf8d&scoped=true&lang=css&":
-/*!**************************************************************************************************************!*\
-  !*** ./resources/js/components/MapaComerciales.vue?vue&type=style&index=0&id=7fecaf8d&scoped=true&lang=css& ***!
-  \**************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_MapaComerciales_vue_vue_type_style_index_0_id_7fecaf8d_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./MapaComerciales.vue?vue&type=style&index=0&id=7fecaf8d&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MapaComerciales.vue?vue&type=style&index=0&id=7fecaf8d&scoped=true&lang=css&");
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_MapaComerciales_vue_vue_type_style_index_0_id_7fecaf8d_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_MapaComerciales_vue_vue_type_style_index_0_id_7fecaf8d_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_MapaComerciales_vue_vue_type_style_index_0_id_7fecaf8d_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_MapaComerciales_vue_vue_type_style_index_0_id_7fecaf8d_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-
-
-/***/ }),
-
-/***/ "./resources/js/components/MapaComerciales.vue?vue&type=template&id=7fecaf8d&scoped=true&":
-/*!************************************************************************************************!*\
-  !*** ./resources/js/components/MapaComerciales.vue?vue&type=template&id=7fecaf8d&scoped=true& ***!
-  \************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MapaComerciales_vue_vue_type_template_id_7fecaf8d_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./MapaComerciales.vue?vue&type=template&id=7fecaf8d&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/MapaComerciales.vue?vue&type=template&id=7fecaf8d&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MapaComerciales_vue_vue_type_template_id_7fecaf8d_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MapaComerciales_vue_vue_type_template_id_7fecaf8d_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -84733,30 +83721,18 @@ __webpack_require__.r(__webpack_exports__);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__["default"]);
 /* harmony default export */ __webpack_exports__["default"] = (new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
   state: {
-    cafes: [],
-    restaurantes: [],
-    hoteles: [],
-    hospitales: [],
+    cabezales: [],
     comercial: {},
     comerciales: [],
     categorias: [],
     categoria: ''
   },
   mutations: {
-    AGREGAR_CAFES: function AGREGAR_CAFES(state, cafes) {
-      state.cafes = cafes;
-    },
-    AGREGAR_RESTAURANTES: function AGREGAR_RESTAURANTES(state, restaurantes) {
-      state.restaurantes = restaurantes;
-    },
-    AGREGAR_HOTELES: function AGREGAR_HOTELES(state, hoteles) {
-      state.hoteles = hoteles;
+    AGREGAR_CABEZALES: function AGREGAR_CABEZALES(state, cabezales) {
+      state.cabezales = cabezales;
     },
     AGREGAR_COMERCIAL: function AGREGAR_COMERCIAL(state, comercial) {
       state.comercial = comercial;
-    },
-    AGREGAR_HOSPITALES: function AGREGAR_HOSPITALES(state, hospitales) {
-      state.hospitales = hospitales;
     },
     AGREGAR_COMERCIALES: function AGREGAR_COMERCIALES(state, comerciales) {
       state.comerciales = comerciales;

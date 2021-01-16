@@ -13,7 +13,7 @@
 @section('content')
 
  <div class="container">
-      <h1 class="text-center mt-4">Registrar Comercial o Establecimiento</h1>
+      <h1 class="text-center mt-4">Registrar Vehiculo</h1>
 
       <div class="mt-5 row justify-content-center">
 
@@ -25,12 +25,12 @@
            <legend class="text-primary">Nombre , Categoria e Imagen</legend>
 
          <div class="form-group">
-           <label for="nombre">Nombre Comercial</label>
+           <label for="nombre">Titulo para publicacion</label>
            <input
              id="nombre"
              type="text"
              class="form-control @error('nombre') is-invalid @enderror"
-             placeholder="Nombre Comercial"
+             placeholder="Titulo publicacion"
              name="nombre"
              value="{{old('nombre')}}"
            >
@@ -44,7 +44,7 @@
         </div>
 
         <div class="form-group">
-              <label for="categoria">Categoria Establecimiento</label>
+              <label for="categoria">Categoria Vehiculo</label>
 
               <select
                 class="form-control @error('categoria_id') is-invalid @enderror"
@@ -66,7 +66,7 @@
 
 
         <div class="form-group">
-          <label for="imagen_principal">Imagen Comercial o Establecimiento</label>
+          <label for="imagen_principal">Imagen Vehiculo</label>
           <input
             id="imagen_principal"
             type="file"
@@ -85,110 +85,36 @@
 
        </fieldset>
 
-    <fieldset class="border p-4">
-        <legend class="text-primary">Ubicacion Comercial o de Establecimiento</legend>
-
-        <div class="form-group">
-            <label for="nombre">Direccio del Establecimiento</label>
-            <input
-            type="text"
-            class="form-control"
-            placeholder="Calle Comercial o Establecimiento"
-            >
-
-            <a href="" class="text-secondary mt-5 mb-3 text-center">EL assitente colocara una direccion estimada , o coloca el Pin en el lugar correcto</a>
-        </div>
-
-        <div class="form-group">
-            <div id="mapa" style="height: 400px"></div>
-        </div>
-
-        <p class="informacion">Confirma que los siguientes campos son correctos</p>
-
-        <div class="form-group">
-                <input
-                  type="text"
-                  id="direccion"
-                  class="form-control @error('direccion') is-invalid @enderror"
-                  placeholder="Direccion"
-                  value="{{old('direccion')}}"
-                  name="direccion"
-                >
-                @error('direccion')
-                <div class="invalid-feedback">
-                    {{$message}}
-                </div>
-              @enderror
-        </div>
-
-        <div class="form-group">
-                <input
-                  type="text"
-                  id="colonia"
-                  class="form-control @error('colonia') is-invalid @enderror"
-                  placeholder="Colonia"
-                  value="{{old('colonia')}}"
-                  name="colonia"
-                >
-                @error('colonia')
-                <div class="invalid-feedback">
-                    {{$message}}
-                </div>
-              @enderror
-        </div>
-
-        <input type="hidden" id="lat" name="lat" value="{{old('lat')}}">
-        <input type="hidden" id="lng" name="lng" value="{{old('lng')}}">
-
-
-    </fieldset>
-
-    <fieldset class="border p-4 mt-5">
-        <legend  class="text-primary">Información Establecimiento: </legend>
-            <div class="form-group">
-                <label for="telefono">Teléfono</label>
-                <input
-                    type="tel"
-                    class="form-control @error('telefono')  is-invalid  @enderror"
-                    id="telefono"
-                    placeholder="Teléfono Establecimiento"
-                    name="telefono"
-                    value="{{ old('telefono') }}"
-                >
-
-                    @error('telefono')
-                        <div class="invalid-feedback">
-                            {{$message}}
-                        </div>
-                    @enderror
-            </div>
-
-
+        <fieldset class="border p-4">
+            <legend class="text-primary">Ubicacion Vehiculo</legend>
 
             <div class="form-group">
-                <label for="descripcion">Descripción</label>
-                <textarea
-                    class="form-control  @error('descripcion')  is-invalid  @enderror"
-                    name="descripcion"
-                >{{ old('descripcion') }}</textarea>
+                <label for="nombre">Direccion donde se encuentra el Vehiculo</label>
+                <input
+                type="text"
+                class="form-control"
+                placeholder="Calle Comercial o Establecimiento"
+                >
 
-                    @error('descripcion')
-                        <div class="invalid-feedback">
-                            {{$message}}
-                        </div>
-                    @enderror
+                <a href="" class="text-secondary mt-5 mb-3 text-center">EL assitente colocara una direccion estimada , o coloca el Pin en el lugar correcto</a>
             </div>
 
             <div class="form-group">
-                <label for="apertura">Hora Apertura:</label>
-                <input
-                    type="time"
-                    class="form-control @error('apertura')  is-invalid  @enderror"
-                    id="apertura"
-                    name="apertura"
-                    value="{{ old('apertura') }}"
-                >
-                @error('apertura')
+                <div id="mapa" style="height: 400px"></div>
+            </div>
+
+            <p class="informacion">Confirma que los siguientes campos son correctos</p>
+
+            <div class="form-group">
+                    <input
+                    type="text"
+                    id="direccion"
+                    class="form-control @error('direccion') is-invalid @enderror"
+                    placeholder="Direccion"
+                    value="{{old('direccion')}}"
+                    name="direccion"
+                    >
+                    @error('direccion')
                     <div class="invalid-feedback">
                         {{$message}}
                     </div>
@@ -196,32 +122,106 @@
             </div>
 
             <div class="form-group">
-                <label for="nombre">Hora Cierre:</label>
-                <input
-                    type="time"
-                    class="form-control @error('cierre')  is-invalid  @enderror"
-                    id="cierre"
-                    name="cierre"
-                    value="{{ old('cierre') }}"
-                >
-                @error('cierre')
+                    <input
+                    type="text"
+                    id="colonia"
+                    class="form-control @error('colonia') is-invalid @enderror"
+                    placeholder="Colonia"
+                    value="{{old('colonia')}}"
+                    name="colonia"
+                    >
+                    @error('colonia')
                     <div class="invalid-feedback">
                         {{$message}}
                     </div>
                 @enderror
             </div>
-    </fieldset>
 
-    <fieldset class="border p-4 mt-5">
-      <legend class="text-primary">Imagenes del Comercial o Establecimiento</legend>
-       <div class="form-group">
-           <label for="imagenes">Imagenes</label>
-           <div id="dropzone" class="dropzone form-control"></div>
-       </div>
-    </fieldset>
+            <input type="hidden" id="lat" name="lat" value="{{old('lat')}}">
+            <input type="hidden" id="lng" name="lng" value="{{old('lng')}}">
 
-     <input type="hidden" id="uuid" name="uuid" value="{{ Str::uuid()->toString()}}">
-     <input type="submit" class="btn btn-primary mt-3 d-block" value="Registrar Establecimiento">
+
+        </fieldset>
+
+        <fieldset class="border p-4 mt-5">
+            <legend  class="text-primary">Información Comercial del Vehiculo: </legend>
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input
+                        type="tel"
+                        class="form-control @error('telefono')  is-invalid  @enderror"
+                        id="telefono"
+                        placeholder="Teléfono Establecimiento"
+                        name="telefono"
+                        value="{{ old('telefono') }}"
+                    >
+
+                        @error('telefono')
+                            <div class="invalid-feedback">
+                                {{$message}}
+                            </div>
+                        @enderror
+                </div>
+
+
+
+                <div class="form-group">
+                    <label for="descripcion">Descripción</label>
+                    <textarea
+                        class="form-control  @error('descripcion')  is-invalid  @enderror"
+                        name="descripcion"
+                    >{{ old('descripcion') }}</textarea>
+
+                        @error('descripcion')
+                            <div class="invalid-feedback">
+                                {{$message}}
+                            </div>
+                        @enderror
+                </div>
+
+                <div class="form-group">
+                    <label for="apertura">Hora Apertura:</label>
+                    <input
+                        type="time"
+                        class="form-control @error('apertura')  is-invalid  @enderror"
+                        id="apertura"
+                        name="apertura"
+                        value="{{ old('apertura') }}"
+                    >
+                    @error('apertura')
+                        <div class="invalid-feedback">
+                            {{$message}}
+                        </div>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    <label for="nombre">Hora Cierre:</label>
+                    <input
+                        type="time"
+                        class="form-control @error('cierre')  is-invalid  @enderror"
+                        id="cierre"
+                        name="cierre"
+                        value="{{ old('cierre') }}"
+                    >
+                    @error('cierre')
+                        <div class="invalid-feedback">
+                            {{$message}}
+                        </div>
+                    @enderror
+                </div>
+        </fieldset>
+
+        <fieldset class="border p-4 mt-5">
+        <legend class="text-primary">Galeria De Imagenes Del Vehiculo</legend>
+        <div class="form-group">
+            <label for="imagenes">Imagenes</label>
+            <div id="dropzone" class="dropzone form-control"></div>
+        </div>
+        </fieldset>
+
+        <input type="hidden" id="uuid" name="uuid" value="{{ Str::uuid()->toString()}}">
+        <input type="submit" class="btn btn-primary mt-3 d-block" value="Registrar Establecimiento">
 
       </form>
 

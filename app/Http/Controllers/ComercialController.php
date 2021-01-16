@@ -12,6 +12,11 @@ use Intervention\Image\Gd\Commands\BackupCommand;
 class ComercialController extends Controller
 {
 
+    public function inicio()
+    {
+        return view('comercial.inicio');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

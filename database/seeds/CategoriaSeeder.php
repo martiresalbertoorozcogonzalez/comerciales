@@ -16,64 +16,40 @@ class CategoriaSeeder extends Seeder
     {
 
         DB::table('categorias')->insert([
-            'nombre' => 'Restaurant',
-              'slug' => Str::slug('Restaurant'),
+            'nombre' => 'Cabezales',
+              'slug' => Str::slug('Cabezales'),
              'created_at' => Carbon::now(),
              'updated_at' => Carbon::now(),
         ]);
 
 
         DB::table('categorias')->insert([
-            'nombre' => 'Cafe',
-              'slug' => Str::slug('Cafe'),
+            'nombre' => 'Furgones',
+              'slug' => Str::slug('Furgones'),
              'created_at' => Carbon::now(),
              'updated_at' => Carbon::now(),
         ]);
 
 
         DB::table('categorias')->insert([
-            'nombre' => 'Hotel',
-              'slug' => Str::slug('Hotel'),
+            'nombre' => 'Plataformas',
+              'slug' => Str::slug('Plataformas'),
              'created_at' => Carbon::now(),
              'updated_at' => Carbon::now(),
         ]);
 
 
         DB::table('categorias')->insert([
-            'nombre' => 'Bar',
-              'slug' => Str::slug('Bar'),
+            'nombre' => 'Carros',
+              'slug' => Str::slug('Carros'),
              'created_at' => Carbon::now(),
              'updated_at' => Carbon::now(),
         ]);
 
 
         DB::table('categorias')->insert([
-            'nombre' => 'Hospital',
-              'slug' => Str::slug('Hospital'),
-             'created_at' => Carbon::now(),
-             'updated_at' => Carbon::now(),
-        ]);
-
-
-        DB::table('categorias')->insert([
-            'nombre' => 'Gimnacio',
-              'slug' => Str::slug('Gimnacio'),
-             'created_at' => Carbon::now(),
-             'updated_at' => Carbon::now(),
-        ]);
-
-
-        DB::table('categorias')->insert([
-            'nombre' => 'Doctor',
-              'slug' => Str::slug('Doctor'),
-             'created_at' => Carbon::now(),
-             'updated_at' => Carbon::now(),
-        ]);
-
-
-        DB::table('categorias')->insert([
-            'nombre' => 'Colegio',
-              'slug' => Str::slug('Colegio'),
+            'nombre' => 'Motos',
+              'slug' => Str::slug('Motos'),
              'created_at' => Carbon::now(),
              'updated_at' => Carbon::now(),
         ]);

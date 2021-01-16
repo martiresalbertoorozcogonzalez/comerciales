@@ -25,7 +25,7 @@ class APIController extends Controller
         return response()->json($categorias);
     }
 
-    //Muestra los cameriales de la categoria en especifico
+    //Muestra los camerciales de la categoria especifica
     public function categoria(Categoria $categoria)
     {
         $comerciales = Comercial::where('categoria_id', $categoria->id)->with('categoria')->take(3)->get();

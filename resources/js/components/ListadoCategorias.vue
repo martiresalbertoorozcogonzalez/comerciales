@@ -48,7 +48,7 @@ export default {
 
 <style scoped>
 div {
-  background-color: #6272d4;
+  background-color: white;
 }
 nav a {
   color: white;
@@ -83,4 +83,11 @@ nav a:nth-child(6) {
 nav a:nth-child(7) {
   background-color: #00a81c;
 }
+nav a:nth-child(8) {
+  background-color: #FFA07A;
+}
+nav a:nth-child(9) {
+  background-color: #C95248;
+}
+
 </style>
