@@ -1,14 +1,14 @@
 <template>
-  <div class="container my-5">
-      <h2>Cabezales</h2>
+<div class="container mt-5 justify-content-center">
+      <h1 class="titulo">Cabezales</h1>
 
       <div class="row">
           <div class="col-md-4 mt-4" v-for=" cabezal in this.cabezales" v-bind:key="cabezal.id">
 
-             <div class="card">
+             <div class="card bg border-dark p-2">
                  <img class="card-img-top" :src="`storage/${cabezal.imagen_principal}`" alt="card del cabezal">
                  <div class="card-body">
-                     <h3 class="card-title text-primary font-weight-bold">
+                     <h3 class="card-title font-weight-bold">
                          {{ cabezal.nombre }}
                      </h3>
                      <p class="card-text">{{cabezal.direccion}}</p>
@@ -18,7 +18,7 @@
                      </p>
 
                     <router-link :to="{name:'comercial', params: { id: cabezal.id }}">
-                      <a class="btn btn-primary d-block">Ver informacion completa</a>
+                      <a class="btn btn-danger d-block">Informacion</a>
                     </router-link>
 
                  </div>
@@ -26,8 +26,8 @@
 
           </div>
       </div>
+</div>
 
-  </div>
 </template>
 
 <script>
@@ -45,3 +45,14 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+
+.titulo{
+    font-size:45px;
+}
+
+.card-title{
+    color: black;
+}
+</style>

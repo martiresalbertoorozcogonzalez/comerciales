@@ -1,4 +1,4 @@
-$body-bg: #f8fafc;
+$body-bg: white;
 
 body {
     font-family: 'Lato', sans-serif;
@@ -6,19 +6,18 @@ body {
 }
 h1, h2, h3, h4 {
     font-weight: 900;
-    color: $indigo;
+    color: $black;
 }
 
 #dropzone {
     height: auto;
 }
 
-
 .text-primary {
     color: $indigo!important;
 }
 .navbar.bg-white {
-    background-color: $red!important;
+    background-color: $black!important;
 
     a {
         color: white!important;
@@ -70,4 +69,3 @@ legend {
     object-fit: scale-down;
     width: 200px;
 }
-

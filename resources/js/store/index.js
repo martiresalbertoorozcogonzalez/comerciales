@@ -5,6 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
    state: {
+     furgones: [],
      cabezales: [],
      comercial:{},
      comerciales:[],
@@ -14,6 +15,9 @@ export default new Vuex.Store({
    mutations: {
       AGREGAR_CABEZALES(state, cabezales) {
           state.cabezales = cabezales;
+      },
+      AGREGAR_FURGONES(state, furgones) {
+        state.furgones = furgones;
       },
       AGREGAR_COMERCIAL(state, comercial) {
         state.comercial = comercial;

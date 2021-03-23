@@ -32,30 +32,14 @@ if (document.querySelector('#mapa')) {
 
             // Reverse Geocoding, cuando el usuario reubica el pin
             geocodeService.reverse().latlng(posicion, 16).run(function(error, resultado) {
-            //   console.log(error);
 
-              console.log(resultado.address);
-
-              marker.bindPopup(resultado.address.LongLabel);
-              marker.openPopup();
-
-              //Llenar los campos
-            llenarInputs(resultado);
+                console.log(error);
+                console.log(resultado);
 
             })
 
         });
 
-        function llenarInputs(resultado){
-            // console.log(resultado);
-           document.querySelector('#direccion').value = resultado.address.Address || '';
-           document.querySelector('#colonia').value = resultado.address.City || '';
-           document.querySelector('#lat').value = resultado.latlng.lat || '';
-           document.querySelector('#lng').value = resultado.latlng.lng || '';
-
-        }
-
     });
 
 }
-

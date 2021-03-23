@@ -8,8 +8,10 @@ class Comercial extends Model
 {
     protected $fillable = [
       'nombre',
-      'categoria_id',
       'imagen_principal',
+      'precio_contado',
+      'precio_financiado',
+      'millaje',
       'direccion',
       'colonia',
       'lat',
@@ -19,6 +21,9 @@ class Comercial extends Model
       'apertura',
       'cierre',
       'uuid',
+      'categoria_id',
+      'condicion_id',
+      'modelo_id',
     ];
 
 

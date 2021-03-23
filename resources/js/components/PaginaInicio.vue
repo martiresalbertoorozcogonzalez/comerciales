@@ -1,8 +1,8 @@
 <template>
 <div>
-  <vue-page-transition name="fade-in-right">
+   <vue-page-transition name="fade-in-right">
    <router-view></router-view>
-  </vue-page-transition>
+   </vue-page-transition>
 </div>
 </template>
 

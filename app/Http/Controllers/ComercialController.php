@@ -2,15 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Imagen;
+use App\Modelo;
 use App\Categoria;
 use App\Comercial;
-use App\Imagen;
+use App\Condicion;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 use Intervention\Image\Gd\Commands\BackupCommand;
 
 class ComercialController extends Controller
 {
+
 
     public function inicio()
     {
@@ -25,7 +28,10 @@ class ComercialController extends Controller
     public function create()
     {
         $categorias = Categoria::all();
-        return view('comercial.create',compact('categorias'));
+        $modelo = Modelo::all();
+        $condicion = Condicion::all();
+
+        return view('comercial.create',compact('categorias','modelo','condicion'));
     }
 
     /**
@@ -36,11 +42,17 @@ class ComercialController extends Controller
      */
     public function store(Request $request)
     {
-        //Validacion
+
+
         $data = $request->validate([
            'nombre' => 'required',
            'categoria_id' => 'required|exists:App\Categoria,id',
+           'condicion_id' => 'required|exists:App\Condicion,id',
+           'modelo_id' => 'required|exists:App\Modelo,id',
            'imagen_principal' => 'required|image|max:1000',
+           'precio_contado' => 'required',
+           'precio_financiado' => 'required',
+           'millaje' => 'required',
            'direccion' => 'required',
            'colonia' => 'required',
            'lat' => 'required',
@@ -49,7 +61,7 @@ class ComercialController extends Controller
            'descripcion' => 'required|min:50',
            'apertura' => 'date_format:H:i',
            'cierre' => 'date_format:H:i|after:apertura',
-           'uuid' => 'required|uuid'
+           'uuid' => 'required|uuid',
         ]);
 
         //Guardar la imagen
@@ -62,8 +74,10 @@ class ComercialController extends Controller
         //Guardar en la BD
         auth()->user()->comercial()->create([
             'nombre' => $data['nombre'],
-            'categoria_id' => $data['categoria_id'],
             'imagen_principal' => $ruta_imagen,
+            'precio_contado' => $data['precio_contado'],
+            'precio_financiado' => $data['precio_financiado'],
+            'millaje' => $data['millaje'],
             'direccion' => $data['direccion'],
             'colonia' => $data['colonia'],
             'lat' => $data['lat'],
@@ -73,7 +87,10 @@ class ComercialController extends Controller
             'apertura' => $data['apertura'],
             'cierre' => $data['cierre'],
             'uuid' => $data['uuid'],
-        ]);
+            'categoria_id' => $data['categoria_id'],
+            'condicion_id' => $data['condicion_id'],
+            'modelo_id' => $data['modelo_id'],
+            ]);
 
         return back()->with('estado','La informacion se envio correctamente');
     }
@@ -122,6 +139,7 @@ class ComercialController extends Controller
     {
                 //Ejecutar Policy
                 $this->authorize('update', $comercial);
+
                 //Validacion
                 $data = $request->validate([
                     'nombre' => 'required',

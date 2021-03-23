@@ -13,14 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/','InicioController')->name('inicio');
 
 Auth::routes(['verify' => true]);
 
 Route::group(['middleware' =>[ 'auth','verified']], function () {
 
-    Route::get('/comercial/inicio','ComercialController@inicio')->name('comercial.inicio');
-    Route::get('/comercial/create','ComercialController@create')->name('comercial.create');
+    Route::get('/comercial/admin','AdminController@index')->name('comercial.admin');
+
+    Route::get('/comercial/create','ComercialController@create')->name('comercial.create')->middleware('revisar');
     Route::post('/comercial','ComercialController@store')->name('comercial.store');
     Route::get('/comercial/edit','ComercialController@edit')->name('comercial.edit');
     Route::put('/comercial/{comercial}','ComercialController@update')->name('comercial.update');

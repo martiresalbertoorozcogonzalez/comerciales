@@ -44,6 +44,7 @@ class ImagenController extends Controller
        // Validacion
        $uuid = $request->get('uuid');
        $comercial = Comercial::where('uuid', $uuid)->first();
+       // Aplicar Policy
        $this->authorize('delete', $comercial);
 
        //Imagen a eliminar

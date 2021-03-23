@@ -16,4 +16,6 @@ class InicioController extends Controller
     {
      return view('inicio.index');
     }
+
+
 }
