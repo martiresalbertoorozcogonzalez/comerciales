@@ -19,7 +19,7 @@
 
       <form
         class="col-md-9 col-xs-12 card card-body"
-        action="{{route('comercial.update',['comercial' => $comercial->id])}}"
+        action="{{route('admin.publicaciones.update',['comercial' => $comercial->id])}}"
         method="POST"
         enctype="multipart/form-data"
         novalidate>
@@ -92,7 +92,7 @@
        </div>
 
        </fieldset>
-
+{{--
     <fieldset class="border p-4">
         <legend class="text-primary">Ubicacion Comercial o de Establecimiento</legend>
 
@@ -149,7 +149,7 @@
         <input type="hidden" id="lng" name="lng" value="{{$comercial->lng}}">
 
 
-    </fieldset>
+    </fieldset>  --}}
 
     <fieldset class="border p-4 mt-5">
         <legend  class="text-primary">Información Establecimiento: </legend>

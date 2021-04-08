@@ -646,24 +646,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /***/ }),
 
-/***/ "./node_modules/admin-lte/dist/js/adminlte.min.js":
-/*!********************************************************!*\
-  !*** ./node_modules/admin-lte/dist/js/adminlte.min.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(jQuery) {/*!
- * AdminLTE v3.0.0-alpha.2 (https://adminlte.io)
- * Copyright 2014-2018 Abdullah Almsaeed <abdullah@almsaeedstudio.com>
- * Licensed under MIT (https://github.com/almasaeed2010/AdminLTE/blob/master/LICENSE)
- */
-!function(e,t){ true?t(exports):undefined}(this,function(e){"use strict";var i,t,o,n,r,a,s,c,f,l,u,d,h,p,_,g,y,m,v,C,D,E,A,O,w,b,L,S,j,T,I,Q,R,P,x,B,M,k,H,N,Y,U,V,G,W,X,z,F,q,J,K,Z,$,ee,te,ne="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},ie=function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")},oe=(i=jQuery,t="ControlSidebar",o="lte.control.sidebar",n=i.fn[t],r=".control-sidebar",a='[data-widget="control-sidebar"]',s=".main-header",c="control-sidebar-open",f="control-sidebar-slide-open",l={slide:!0},u=function(){function n(e,t){ie(this,n),this._element=e,this._config=this._getConfig(t)}return n.prototype.show=function(){this._config.slide?i("body").removeClass(f):i("body").removeClass(c)},n.prototype.collapse=function(){this._config.slide?i("body").addClass(f):i("body").addClass(c)},n.prototype.toggle=function(){this._setMargin(),i("body").hasClass(c)||i("body").hasClass(f)?this.show():this.collapse()},n.prototype._getConfig=function(e){return i.extend({},l,e)},n.prototype._setMargin=function(){i(r).css({top:i(s).outerHeight()})},n._jQueryInterface=function(t){return this.each(function(){var e=i(this).data(o);if(e||(e=new n(this,i(this).data()),i(this).data(o,e)),"undefined"===e[t])throw new Error(t+" is not a function");e[t]()})},n}(),i(document).on("click",a,function(e){e.preventDefault(),u._jQueryInterface.call(i(this),"toggle")}),i.fn[t]=u._jQueryInterface,i.fn[t].Constructor=u,i.fn[t].noConflict=function(){return i.fn[t]=n,u._jQueryInterface},u),re=(d=jQuery,h="Layout",p="lte.layout",_=d.fn[h],g=".main-sidebar",y=".main-header",m=".content-wrapper",v=".main-footer",C="hold-transition",D=function(){function n(e){ie(this,n),this._element=e,this._init()}return n.prototype.fixLayoutHeight=function(){var e={window:d(window).height(),header:d(y).outerHeight(),footer:d(v).outerHeight(),sidebar:d(g).height()},t=this._max(e);d(m).css("min-height",t-e.header),d(g).css("min-height",t-e.header)},n.prototype._init=function(){var e=this;d("body").removeClass(C),this.fixLayoutHeight(),d(g).on("collapsed.lte.treeview expanded.lte.treeview collapsed.lte.pushmenu expanded.lte.pushmenu",function(){e.fixLayoutHeight()}),d(window).resize(function(){e.fixLayoutHeight()}),d("body, html").css("height","auto")},n.prototype._max=function(t){var n=0;return Object.keys(t).forEach(function(e){t[e]>n&&(n=t[e])}),n},n._jQueryInterface=function(t){return this.each(function(){var e=d(this).data(p);e||(e=new n(this),d(this).data(p,e)),t&&e[t]()})},n}(),d(window).on("load",function(){D._jQueryInterface.call(d("body"))}),d.fn[h]=D._jQueryInterface,d.fn[h].Constructor=D,d.fn[h].noConflict=function(){return d.fn[h]=_,D._jQueryInterface},D),ae=(E=jQuery,A="PushMenu",w="."+(O="lte.pushmenu"),b=E.fn[A],L={COLLAPSED:"collapsed"+w,SHOWN:"shown"+w},S={screenCollapseSize:768},j={TOGGLE_BUTTON:'[data-widget="pushmenu"]',SIDEBAR_MINI:".sidebar-mini",SIDEBAR_COLLAPSED:".sidebar-collapse",BODY:"body",OVERLAY:"#sidebar-overlay",WRAPPER:".wrapper"},T="sidebar-collapse",I="sidebar-open",Q=function(){function n(e,t){ie(this,n),this._element=e,this._options=E.extend({},S,t),E(j.OVERLAY).length||this._addOverlay()}return n.prototype.show=function(){E(j.BODY).addClass(I).removeClass(T);var e=E.Event(L.SHOWN);E(this._element).trigger(e)},n.prototype.collapse=function(){E(j.BODY).removeClass(I).addClass(T);var e=E.Event(L.COLLAPSED);E(this._element).trigger(e)},n.prototype.toggle=function(){(E(window).width()>=this._options.screenCollapseSize?!E(j.BODY).hasClass(T):E(j.BODY).hasClass(I))?this.collapse():this.show()},n.prototype._addOverlay=function(){var e=this,t=E("<div />",{id:"sidebar-overlay"});t.on("click",function(){e.collapse()}),E(j.WRAPPER).append(t)},n._jQueryInterface=function(t){return this.each(function(){var e=E(this).data(O);e||(e=new n(this),E(this).data(O,e)),t&&e[t]()})},n}(),E(document).on("click",j.TOGGLE_BUTTON,function(e){e.preventDefault();var t=e.currentTarget;"pushmenu"!==E(t).data("widget")&&(t=E(t).closest(j.TOGGLE_BUTTON)),Q._jQueryInterface.call(E(t),"toggle")}),E.fn[A]=Q._jQueryInterface,E.fn[A].Constructor=Q,E.fn[A].noConflict=function(){return E.fn[A]=b,Q._jQueryInterface},Q),se=(R=jQuery,P="Treeview",B="."+(x="lte.treeview"),M=R.fn[P],k={SELECTED:"selected"+B,EXPANDED:"expanded"+B,COLLAPSED:"collapsed"+B,LOAD_DATA_API:"load"+B},H=".nav-item",N=".nav-treeview",Y=".menu-open",V="menu-open",G={trigger:(U='[data-widget="treeview"]')+" "+".nav-link",animationSpeed:300,accordion:!0},W=function(){function i(e,t){ie(this,i),this._config=t,this._element=e}return i.prototype.init=function(){this._setupListeners()},i.prototype.expand=function(e,t){var n=this,i=R.Event(k.EXPANDED);if(this._config.accordion){var o=t.siblings(Y).first(),r=o.find(N).first();this.collapse(r,o)}e.slideDown(this._config.animationSpeed,function(){t.addClass(V),R(n._element).trigger(i)})},i.prototype.collapse=function(e,t){var n=this,i=R.Event(k.COLLAPSED);e.slideUp(this._config.animationSpeed,function(){t.removeClass(V),R(n._element).trigger(i),e.find(Y+" > "+N).slideUp(),e.find(Y).removeClass(V)})},i.prototype.toggle=function(e){var t=R(e.currentTarget),n=t.next();if(n.is(N)){e.preventDefault();var i=t.parents(H).first();i.hasClass(V)?this.collapse(R(n),i):this.expand(R(n),i)}},i.prototype._setupListeners=function(){var t=this;R(document).on("click",this._config.trigger,function(e){t.toggle(e)})},i._jQueryInterface=function(n){return this.each(function(){var e=R(this).data(x),t=R.extend({},G,R(this).data());e||(e=new i(R(this),t),R(this).data(x,e)),"init"===n&&e[n]()})},i}(),R(window).on(k.LOAD_DATA_API,function(){R(U).each(function(){W._jQueryInterface.call(R(this),"init")})}),R.fn[P]=W._jQueryInterface,R.fn[P].Constructor=W,R.fn[P].noConflict=function(){return R.fn[P]=M,W._jQueryInterface},W),ce=(X=jQuery,z="Widget",q="."+(F="lte.widget"),J=X.fn[z],K={EXPANDED:"expanded"+q,COLLAPSED:"collapsed"+q,REMOVED:"removed"+q},$="collapsed-card",ee={animationSpeed:"normal",collapseTrigger:(Z={DATA_REMOVE:'[data-widget="remove"]',DATA_COLLAPSE:'[data-widget="collapse"]',CARD:".card",CARD_HEADER:".card-header",CARD_BODY:".card-body",CARD_FOOTER:".card-footer",COLLAPSED:".collapsed-card"}).DATA_COLLAPSE,removeTrigger:Z.DATA_REMOVE},te=function(){function n(e,t){ie(this,n),this._element=e,this._parent=e.parents(Z.CARD).first(),this._settings=X.extend({},ee,t)}return n.prototype.collapse=function(){var e=this;this._parent.children(Z.CARD_BODY+", "+Z.CARD_FOOTER).slideUp(this._settings.animationSpeed,function(){e._parent.addClass($)});var t=X.Event(K.COLLAPSED);this._element.trigger(t,this._parent)},n.prototype.expand=function(){var e=this;this._parent.children(Z.CARD_BODY+", "+Z.CARD_FOOTER).slideDown(this._settings.animationSpeed,function(){e._parent.removeClass($)});var t=X.Event(K.EXPANDED);this._element.trigger(t,this._parent)},n.prototype.remove=function(){this._parent.slideUp();var e=X.Event(K.REMOVED);this._element.trigger(e,this._parent)},n.prototype.toggle=function(){this._parent.hasClass($)?this.expand():this.collapse()},n.prototype._init=function(e){var t=this;this._parent=e,X(this).find(this._settings.collapseTrigger).click(function(){t.toggle()}),X(this).find(this._settings.removeTrigger).click(function(){t.remove()})},n._jQueryInterface=function(t){return this.each(function(){var e=X(this).data(F);e||(e=new n(X(this),e),X(this).data(F,"string"==typeof t?e:t)),"string"==typeof t&&t.match(/remove|toggle/)?e[t]():"object"===("undefined"==typeof t?"undefined":ne(t))&&e._init(X(this))})},n}(),X(document).on("click",Z.DATA_COLLAPSE,function(e){e&&e.preventDefault(),te._jQueryInterface.call(X(this),"toggle")}),X(document).on("click",Z.DATA_REMOVE,function(e){e&&e.preventDefault(),te._jQueryInterface.call(X(this),"remove")}),X.fn[z]=te._jQueryInterface,X.fn[z].Constructor=te,X.fn[z].noConflict=function(){return X.fn[z]=J,te._jQueryInterface},te);e.ControlSidebar=oe,e.Layout=re,e.PushMenu=ae,e.Treeview=se,e.Widget=ce,Object.defineProperty(e,"__esModule",{value:!0})});
-//# sourceMappingURL=adminlte.min.js.map
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
-
-/***/ }),
-
 /***/ "./node_modules/axios/index.js":
 /*!*************************************!*\
   !*** ./node_modules/axios/index.js ***!
@@ -2517,7 +2499,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     var _this = this;
@@ -2535,6 +2516,63 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaCarros.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CategoriaCarros.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    var _this = this;
+
+    axios.get('/api/categorias/carros').then(function (respuesta) {
+      _this.$store.commit("AGREGAR_CARROS", respuesta.data);
+    });
+  },
+  computed: {
+    carros: function carros() {
+      return this.$store.state.carros;
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaFurgones.vue?vue&type=script&lang=js&":
 /*!****************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CategoriaFurgones.vue?vue&type=script&lang=js& ***!
@@ -2544,7 +2582,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
 //
 //
 //
@@ -2724,6 +2761,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _HeaderPagina__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HeaderPagina */ "./resources/js/components/HeaderPagina.vue");
 /* harmony import */ var _CategoriaCabezales__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CategoriaCabezales */ "./resources/js/components/CategoriaCabezales.vue");
 /* harmony import */ var _CategoriaFurgones__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CategoriaFurgones */ "./resources/js/components/CategoriaFurgones.vue");
+/* harmony import */ var _CategoriaCarros__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./CategoriaCarros */ "./resources/js/components/CategoriaCarros.vue");
 //
 //
 //
@@ -2733,6 +2771,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+
 
 
 
@@ -2741,7 +2781,8 @@ __webpack_require__.r(__webpack_exports__);
     HeaderPagina: _HeaderPagina__WEBPACK_IMPORTED_MODULE_0__["default"],
     // ListadoCategorias,
     CategoriaCabezales: _CategoriaCabezales__WEBPACK_IMPORTED_MODULE_1__["default"],
-    CategoriaFurgones: _CategoriaFurgones__WEBPACK_IMPORTED_MODULE_2__["default"]
+    CategoriaFurgones: _CategoriaFurgones__WEBPACK_IMPORTED_MODULE_2__["default"],
+    CategoriaCarros: _CategoriaCarros__WEBPACK_IMPORTED_MODULE_3__["default"]
   }
 });
 
@@ -2802,6 +2843,24 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MapaUbicacion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MapaUbicacion */ "./resources/js/components/MapaUbicacion.vue");
 /* harmony import */ var _GaleriaImagenes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GaleriaImagenes */ "./resources/js/components/GaleriaImagenes.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -7375,6 +7434,25 @@ exports.push([module.i, "\n.titulo[data-v-27b22b4a]{\n    font-size:45px;\n}\n.c
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaCarros.vue?vue&type=style&index=0&id=5f66630c&scoped=true&lang=css&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CategoriaCarros.vue?vue&type=style&index=0&id=5f66630c&scoped=true&lang=css& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.titulo[data-v-5f66630c]{\n    font-size:45px;\n}\n.card-title[data-v-5f66630c]{\n    color: black;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaFurgones.vue?vue&type=style&index=0&id=c13344ee&scoped=true&lang=css&":
 /*!***********************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CategoriaFurgones.vue?vue&type=style&index=0&id=c13344ee&scoped=true&lang=css& ***!
@@ -7406,7 +7484,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css);", ""]);
 
 // module
-exports.push([module.i, "\n", ""]);
+exports.push([module.i, "\nimg[data-v-2fcfb43d]{\n    max-width: 80px;\n}\n\n", ""]);
 
 // exports
 
@@ -52749,6 +52827,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaCarros.vue?vue&type=style&index=0&id=5f66630c&scoped=true&lang=css&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CategoriaCarros.vue?vue&type=style&index=0&id=5f66630c&scoped=true&lang=css& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./CategoriaCarros.vue?vue&type=style&index=0&id=5f66630c&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaCarros.vue?vue&type=style&index=0&id=5f66630c&scoped=true&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaFurgones.vue?vue&type=style&index=0&id=c13344ee&scoped=true&lang=css&":
 /*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CategoriaFurgones.vue?vue&type=style&index=0&id=c13344ee&scoped=true&lang=css& ***!
@@ -53528,10 +53636,6 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _c("p", { staticClass: "card-text" }, [
-                  _vm._v(_vm._s(cabezal.direccion))
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "card-text" }, [
                   _c("span", { staticClass: "font-weight-bold" }, [
                     _vm._v("Horario:")
                   ]),
@@ -53549,6 +53653,93 @@ var render = function() {
                   {
                     attrs: {
                       to: { name: "comercial", params: { id: cabezal.id } }
+                    }
+                  },
+                  [
+                    _c("a", { staticClass: "btn btn-danger d-block" }, [
+                      _vm._v("Informacion")
+                    ])
+                  ]
+                )
+              ],
+              1
+            )
+          ])
+        ])
+      }),
+      0
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaCarros.vue?vue&type=template&id=5f66630c&scoped=true&":
+/*!******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/CategoriaCarros.vue?vue&type=template&id=5f66630c&scoped=true& ***!
+  \******************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container mt-5 justify-content-center" }, [
+    _c("h1", { staticClass: "titulo" }, [_vm._v("Carros")]),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "row" },
+      _vm._l(this.carros, function(carro) {
+        return _c("div", { key: carro.id, staticClass: "col-md-4 mt-4" }, [
+          _c("div", { staticClass: "card bg border-dark p-2" }, [
+            _c("img", {
+              staticClass: "card-img-top",
+              attrs: {
+                src: "storage/" + carro.imagen_principal,
+                alt: "card del cabezal"
+              }
+            }),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "card-body" },
+              [
+                _c("h3", { staticClass: "card-title font-weight-bold" }, [
+                  _vm._v(
+                    "\n                         " +
+                      _vm._s(carro.nombre) +
+                      "\n                     "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "card-text" }, [
+                  _c("span", { staticClass: "font-weight-bold" }, [
+                    _vm._v("Horario:")
+                  ]),
+                  _vm._v(
+                    "\n                         " +
+                      _vm._s(carro.apertura) +
+                      "  -  " +
+                      _vm._s(carro.cierre) +
+                      "\n                     "
+                  )
+                ]),
+                _vm._v(" "),
+                _c(
+                  "router-link",
+                  {
+                    attrs: {
+                      to: { name: "comercial", params: { id: carro.id } }
                     }
                   },
                   [
@@ -53619,10 +53810,6 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _c("p", { staticClass: "card-text" }, [
-                  _vm._v(_vm._s(furgon.direccion))
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "card-text" }, [
                   _c("span", { staticClass: "font-weight-bold" }, [
                     _vm._v("Horario:")
                   ]),
@@ -53687,7 +53874,7 @@ var render = function() {
       "ul",
       { staticClass: "row list-unstyled mt-4" },
       _vm._l(_vm.imagenes, function(imagen) {
-        return _c("li", { key: imagen.id, staticClass: "col-md-4 mb-4" }, [
+        return _c("li", { key: imagen.id, staticClass: "col-md-1" }, [
           _c(
             "a",
             {
@@ -53836,9 +54023,11 @@ var render = function() {
     [
       _c("header-pagina"),
       _vm._v(" "),
+      _c("categoria-cabezales"),
+      _vm._v(" "),
       _c("categoria-furgones"),
       _vm._v(" "),
-      _c("categoria-cabezales")
+      _c("categoria-carros")
     ],
     1
   )
@@ -53907,90 +54096,105 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container my-5" }, [
-    _c("h2", { staticClass: "text-center mb-5" }, [
-      _vm._v(_vm._s(_vm.comercial.nombre))
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "row align-items-start" }, [
-      _c(
-        "div",
-        { staticClass: "col-md-8 order-2" },
-        [
+  return _c(
+    "div",
+    { staticClass: "container my-5" },
+    [
+      _c("center", [
+        _c(
+          "h1",
+          {
+            staticClass: "text-centermb-5",
+            staticStyle: { "margin-top": "120px" }
+          },
+          [_vm._v(_vm._s(_vm.comercial.nombre))]
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row align-items-start" }, [
+        _c("div", { staticClass: "col-md-7 order-1" }, [
           _c("img", {
             staticClass: "img-fluid",
             attrs: {
               src: "../storage/" + _vm.comercial.imagen_principal,
               alt: "imagen comercial o establecimiento"
             }
-          }),
-          _vm._v(" "),
-          _c("p", { staticClass: "mt-3" }, [
-            _vm._v(_vm._s(_vm.comercial.descripcion))
-          ]),
-          _vm._v(" "),
-          _c("galeria-imagenes")
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c("aside", { staticClass: "col-md-4 order-1" }, [
-        _c("div", [_c("mapa-ubicacion")], 1),
+          })
+        ]),
         _vm._v(" "),
-        _c("div", { staticClass: "p-4 bg-primary" }, [
-          _c("h2", { staticClass: "text-center text-white mt-2 mb-4" }, [
-            _vm._v("Mas Informacion")
+        _c("aside", { staticClass: "col-md-5 order-2" }, [
+          _c("div", { staticClass: "p-4 bg-dark" }, [
+            _c("h2", { staticClass: "text-center text-white mt-2 mb-4" }, [
+              _vm._v("Descripcion")
+            ]),
+            _vm._v(" "),
+            _c("p", { staticClass: "text-white mt-1" }, [
+              _c("br"),
+              _vm._v(
+                "\n                  " +
+                  _vm._s(_vm.comercial.descripcion) +
+                  "\n              "
+              )
+            ])
           ]),
           _vm._v(" "),
-          _c("p", { staticClass: "text-white mt-1" }, [
-            _c("span", { staticClass: "font-weight-bold" }, [
-              _vm._v("\n                      Ubicacion\n                  ")
+          _c("div", { staticClass: "p-4 bg-danger" }, [
+            _c("h2", { staticClass: "text-center text-white mt-2 mb-4" }, [
+              _vm._v("Descripcion")
             ]),
-            _vm._v(
-              "\n                  " +
-                _vm._s(_vm.comercial.direccion) +
-                "\n              "
-            )
+            _vm._v(" "),
+            _c("p", { staticClass: "text-white mt-1" }, [
+              _c("br"),
+              _vm._v(
+                "\n                  " +
+                  _vm._s(_vm.comercial.descripcion) +
+                  "\n              "
+              )
+            ])
           ]),
           _vm._v(" "),
-          _c("p", { staticClass: "text-white mt-1" }, [
-            _c("span", { staticClass: "font-weight-bold" }, [
-              _vm._v("\n                      Colonia\n                  ")
-            ]),
-            _vm._v(
-              "\n                  " +
-                _vm._s(_vm.comercial.colonia) +
-                "\n              "
-            )
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "text-white mt-1" }, [
-            _c("span", { staticClass: "font-weight-bold" }, [
-              _vm._v("\n                      Horario\n                  ")
-            ]),
-            _vm._v(
-              "\n                  " +
-                _vm._s(_vm.comercial.apertura) +
-                " - " +
-                _vm._s(_vm.comercial.cierre) +
-                "\n              "
-            )
-          ]),
-          _vm._v(" "),
-          _c("p", { staticClass: "text-white mt-1" }, [
-            _c("span", { staticClass: "font-weight-bold" }, [
-              _vm._v("\n                      Telefono\n                  ")
-            ]),
-            _vm._v(
-              "\n                  " +
-                _vm._s(_vm.comercial.telefono) +
-                "\n              "
-            )
+          _c("div", { staticClass: "p-4 bg-dark" }, [
+            _c("div", { staticClass: "row form-group" }, [
+              _c("div", { staticClass: "col-sm text-white mt-1" }, [
+                _c("span", { staticClass: "font-weight-bold" }, [
+                  _vm._v(
+                    "\n                      Horario :\n                  "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("br"),
+                _vm._v(
+                  "\n                  " +
+                    _vm._s(_vm.comercial.apertura) +
+                    " - " +
+                    _vm._s(_vm.comercial.cierre) +
+                    "\n              "
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-sm text-white mt-1" }, [
+                _c("span", { staticClass: "font-weight-bold" }, [
+                  _vm._v(
+                    "\n                      Telefono :\n                  "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("br"),
+                _vm._v(
+                  "\n                  " +
+                    _vm._s(_vm.comercial.telefono) +
+                    "\n               "
+                )
+              ])
+            ])
           ])
         ])
-      ])
-    ])
-  ])
+      ]),
+      _vm._v(" "),
+      _c("galeria-imagenes")
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -86607,8 +86811,6 @@ try {
   window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 
   __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
-
-  __webpack_require__(/*! admin-lte */ "./node_modules/admin-lte/dist/js/adminlte.min.js");
 } catch (e) {}
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -86717,6 +86919,93 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaCabezales_vue_vue_type_template_id_27b22b4a_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaCabezales_vue_vue_type_template_id_27b22b4a_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/CategoriaCarros.vue":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/CategoriaCarros.vue ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _CategoriaCarros_vue_vue_type_template_id_5f66630c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CategoriaCarros.vue?vue&type=template&id=5f66630c&scoped=true& */ "./resources/js/components/CategoriaCarros.vue?vue&type=template&id=5f66630c&scoped=true&");
+/* harmony import */ var _CategoriaCarros_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CategoriaCarros.vue?vue&type=script&lang=js& */ "./resources/js/components/CategoriaCarros.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _CategoriaCarros_vue_vue_type_style_index_0_id_5f66630c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CategoriaCarros.vue?vue&type=style&index=0&id=5f66630c&scoped=true&lang=css& */ "./resources/js/components/CategoriaCarros.vue?vue&type=style&index=0&id=5f66630c&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _CategoriaCarros_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CategoriaCarros_vue_vue_type_template_id_5f66630c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _CategoriaCarros_vue_vue_type_template_id_5f66630c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "5f66630c",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/CategoriaCarros.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/CategoriaCarros.vue?vue&type=script&lang=js&":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/CategoriaCarros.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaCarros_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./CategoriaCarros.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaCarros.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaCarros_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/CategoriaCarros.vue?vue&type=style&index=0&id=5f66630c&scoped=true&lang=css&":
+/*!**************************************************************************************************************!*\
+  !*** ./resources/js/components/CategoriaCarros.vue?vue&type=style&index=0&id=5f66630c&scoped=true&lang=css& ***!
+  \**************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaCarros_vue_vue_type_style_index_0_id_5f66630c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./CategoriaCarros.vue?vue&type=style&index=0&id=5f66630c&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaCarros.vue?vue&type=style&index=0&id=5f66630c&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaCarros_vue_vue_type_style_index_0_id_5f66630c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaCarros_vue_vue_type_style_index_0_id_5f66630c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaCarros_vue_vue_type_style_index_0_id_5f66630c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaCarros_vue_vue_type_style_index_0_id_5f66630c_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./resources/js/components/CategoriaCarros.vue?vue&type=template&id=5f66630c&scoped=true&":
+/*!************************************************************************************************!*\
+  !*** ./resources/js/components/CategoriaCarros.vue?vue&type=template&id=5f66630c&scoped=true& ***!
+  \************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaCarros_vue_vue_type_template_id_5f66630c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./CategoriaCarros.vue?vue&type=template&id=5f66630c&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/CategoriaCarros.vue?vue&type=template&id=5f66630c&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaCarros_vue_vue_type_template_id_5f66630c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaCarros_vue_vue_type_template_id_5f66630c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -87461,12 +87750,16 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
   state: {
     furgones: [],
     cabezales: [],
+    carros: [],
     comercial: {},
     comerciales: [],
     categorias: [],
     categoria: ''
   },
   mutations: {
+    AGREGAR_CARROS: function AGREGAR_CARROS(state, carros) {
+      state.carros = carros;
+    },
     AGREGAR_CABEZALES: function AGREGAR_CABEZALES(state, cabezales) {
       state.cabezales = cabezales;
     },

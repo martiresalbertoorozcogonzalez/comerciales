@@ -7,12 +7,16 @@ export default new Vuex.Store({
    state: {
      furgones: [],
      cabezales: [],
+     carros:[],
      comercial:{},
      comerciales:[],
      categorias:[],
      categoria:'',
    },
    mutations: {
+      AGREGAR_CARROS(state, carros) {
+          state.carros = carros;
+      },
       AGREGAR_CABEZALES(state, cabezales) {
           state.cabezales = cabezales;
       },

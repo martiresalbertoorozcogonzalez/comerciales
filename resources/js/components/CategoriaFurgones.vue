@@ -11,7 +11,6 @@
                      <h3 class="card-title font-weight-bold">
                          {{ furgon.nombre }}
                      </h3>
-                     <p class="card-text">{{furgon.direccion}}</p>
                      <p class="card-text">
                          <span class="font-weight-bold">Horario:</span>
                          {{furgon.apertura}}  -  {{furgon.cierre}}

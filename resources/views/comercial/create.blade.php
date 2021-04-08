@@ -17,7 +17,7 @@
 
       <div class="mt-5 row justify-content-center">
 
-      <form class="col-md-9 col-xs-12 card card-body" action="{{route('comercial.store')}}" method="POST" enctype="multipart/form-data" novalidate>
+      <form class="col-md-9 col-xs-12 card card-body" action="{{route('admin.publicaciones.store')}}" method="POST" enctype="multipart/form-data" novalidate>
 
          @csrf
 
@@ -252,7 +252,7 @@
                 </div>
         </fieldset>
 
-
+{{--
         <fieldset class="border p-4">
             <legend class="text-primary">Ubicacion Vehiculo</legend>
 
@@ -309,7 +309,7 @@
             <input type="hidden" id="lng" name="lng" value="{{old('lng')}}">
 
 
-        </fieldset>
+        </fieldset>  --}}
 
 
         <input type="hidden" id="uuid" name="uuid" value="{{ Str::uuid()->toString()}}">

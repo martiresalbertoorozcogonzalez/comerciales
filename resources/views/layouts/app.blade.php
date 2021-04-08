@@ -76,6 +76,10 @@
 
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
+                                          <div class="group">
+                                            <a class="dropdown-item" href="{{ route('admin') }}">Admin</a>
+                                           </div>
+
 
                                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                                  document.getElementById('logout-form').submit();">
@@ -87,9 +91,6 @@
                                             @csrf
                                         </form>
 
-                                        <div class="group">
-                                         <a class="dropdown-item" href="{{ route('comercial.admin') }}">Admin</a>
-                                        </div>
 
                                     </div>
                                 </li>

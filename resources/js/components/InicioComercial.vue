@@ -2,8 +2,9 @@
  <div class="container" id="inicio">
 
      <header-pagina></header-pagina>
-     <categoria-furgones></categoria-furgones>
      <categoria-cabezales></categoria-cabezales>
+     <categoria-furgones></categoria-furgones>
+     <categoria-carros></categoria-carros>
 
  </div>
 </template>
@@ -12,6 +13,7 @@
 import HeaderPagina from './HeaderPagina';
 import CategoriaCabezales from './CategoriaCabezales';
 import CategoriaFurgones from './CategoriaFurgones';
+import CategoriaCarros from './CategoriaCarros';
 
 export default {
     components: {
@@ -19,6 +21,7 @@ export default {
         // ListadoCategorias,
         CategoriaCabezales,
         CategoriaFurgones,
+        CategoriaCarros
     }
 
 }

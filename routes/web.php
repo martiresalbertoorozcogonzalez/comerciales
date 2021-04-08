@@ -20,12 +20,13 @@ Auth::routes(['verify' => true]);
 
 Route::group(['middleware' =>[ 'auth','verified']], function () {
 
-    Route::get('/comercial/admin','AdminController@index')->name('comercial.admin');
-
-    Route::get('/comercial/create','ComercialController@create')->name('comercial.create')->middleware('revisar');
-    Route::post('/comercial','ComercialController@store')->name('comercial.store');
-    Route::get('/comercial/edit','ComercialController@edit')->name('comercial.edit');
-    Route::put('/comercial/{comercial}','ComercialController@update')->name('comercial.update');
+    Route::get('/admin','AdminController@index')->name('admin');
+    Route::get('/admin/publicaciones', 'AdminController@publicaciones')->name('admin.publicaciones');
+    Route::get('/admin/publicaciones/create', 'AdminController@create')->name('admin.publicaciones.create');
+    Route::post('/admin/publicaciones','AdminController@store')->name('admin.publicaciones.store');
+    Route::get('/admin/publicaciones/edit', 'AdminController@edit')->name('admin.publicaciones.edit');
+    Route::put('/admin/publicaciones/{comercial}','AdminController@update')->name('admin.publicaciones.update');
+    Route::delete('/admin/publicaciones/{comercial}','AdminController@destroy')->name('admin.publicaciones.destroy');
 
     //Ruta para guardar imagenes en el store
     Route::post('/imagenes/store','ImagenController@store')->name('imagenes.store');

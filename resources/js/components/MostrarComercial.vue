@@ -1,57 +1,75 @@
 <template>
    <div class="container my-5">
-       <h2 class="text-center mb-5">{{comercial.nombre}}</h2>
+
+       <center>
+        <h1 class="text-centermb-5" style="margin-top:120px;">{{comercial.nombre}}</h1>
+       </center>
 
        <div class="row align-items-start">
-           <div class="col-md-8 order-2">
+
+           <div class="col-md-7 order-1">
               <img :src="`../storage/${comercial.imagen_principal}`" class="img-fluid" alt="imagen comercial o establecimiento">
-              <p class="mt-3">{{comercial.descripcion}}</p>
-              <galeria-imagenes></galeria-imagenes>
            </div>
-           <aside class="col-md-4 order-1">
 
-               <div>
-                   <mapa-ubicacion> </mapa-ubicacion>
-               </div>
+           <aside class="col-md-5 order-2">
 
-               <div class="p-4 bg-primary">
-                 <h2 class="text-center text-white mt-2 mb-4">Mas Informacion</h2>
+
+               <div class="p-4 bg-dark">
+                 <h2 class="text-center text-white mt-2 mb-4">Descripcion</h2>
 
                  <p class="text-white mt-1">
-                     <span class="font-weight-bold">
-                         Ubicacion
-                     </span>
-                     {{comercial.direccion}}
+                     <br>
+                     {{comercial.descripcion}}
                  </p>
 
-                   <p class="text-white mt-1">
-                     <span class="font-weight-bold">
-                         Colonia
-                     </span>
-                     {{comercial.colonia}}
-                 </p>
+               </div>
 
-                   <p class="text-white mt-1">
-                     <span class="font-weight-bold">
-                         Horario
-                     </span>
-                     {{comercial.apertura}} - {{comercial.cierre}}
-                 </p>
 
-                   <p class="text-white mt-1">
-                     <span class="font-weight-bold">
-                         Telefono
-                     </span>
-                     {{comercial.telefono}}
+               <div class="p-4 bg-danger">
+
+                 <h2 class="text-center text-white mt-2 mb-4">Descripcion</h2>
+
+                 <p class="text-white mt-1">
+                     <br>
+                     {{comercial.descripcion}}
                  </p>
 
 
                </div>
 
+               <div class="p-4 bg-dark">
 
+                <div class="row form-group">
+
+                  <div class="col-sm text-white mt-1">
+                     <span class="font-weight-bold">
+                         Horario :
+                     </span>
+                     <br>
+                     {{comercial.apertura}} - {{comercial.cierre}}
+                 </div>
+
+                   <div class="col-sm text-white mt-1">
+                     <span class="font-weight-bold">
+                         Telefono :
+                     </span>
+                     <br>
+                     {{comercial.telefono}}
+                  </div>
+
+                 </div>
+
+
+               </div>
 
            </aside>
+
+
        </div>
+
+
+
+         <galeria-imagenes></galeria-imagenes>
 
    </div>
 </template>

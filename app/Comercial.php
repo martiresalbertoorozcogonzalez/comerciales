@@ -12,10 +12,10 @@ class Comercial extends Model
       'precio_contado',
       'precio_financiado',
       'millaje',
-      'direccion',
-      'colonia',
-      'lat',
-      'lng',
+    //   'direccion',
+    //   'colonia',
+    //   'lat',
+    //   'lng',
       'telefono',
       'descripcion',
       'apertura',
@@ -26,10 +26,19 @@ class Comercial extends Model
       'modelo_id',
     ];
 
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 
     public function categoria()
     {
         return $this->belongsTo(Categoria::class);
+    }
+
+    public function condicion()
+    {
+        return $this->belongsTo(Condicion::class);
     }
 
 }

@@ -40,10 +40,10 @@ class CreateComercialsTable extends Migration
             $table->string('precio_contado');
             $table->string('precio_financiado');
             $table->string('millaje');
-            $table->string('direccion');
-            $table->string('colonia');
-            $table->string('lat');
-            $table->string('lng');
+            // $table->string('direccion');
+            // $table->string('colonia');
+            // $table->string('lat');
+            // $table->string('lng');
             $table->string('telefono');
             $table->text('descripcion');
             $table->time('apertura');
