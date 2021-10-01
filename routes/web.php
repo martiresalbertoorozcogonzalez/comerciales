@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/','InicioController')->name('inicio');
 
+Route::get('/index' ,'IndexController@index')->name('index');
+
 Auth::routes(['verify' => true]);
 
 Route::group(['middleware' =>[ 'auth','verified']], function () {

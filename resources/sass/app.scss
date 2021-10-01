@@ -1,3 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.boton-cabezales{
+    @apply inline-block mt-4 bg-gradient-to-r from-red-400 to-blue-400 font-bold text-white text-sm px-5 py-2 rounded-md shadow-md
+}
+
+
+
+
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
@@ -16,8 +27,6 @@ $fa-font-path:"../webfonts";
 
 // estilos del establecimiento
 @import 'establecimiento';
-
-
 
 // estilos carrousel slick
 @import "node_modules/slick-carousel/slick/slick";

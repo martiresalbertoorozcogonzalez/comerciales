@@ -1,7 +1,6 @@
 <template>
  <div class="container" id="inicio">
 
-     <header-pagina></header-pagina>
      <categoria-cabezales></categoria-cabezales>
      <categoria-furgones></categoria-furgones>
      <categoria-carros></categoria-carros>
@@ -29,7 +28,7 @@ export default {
 
 <style>
     #inicio{
-        margin-top:150px;
+        margin-top:50px;
         width: 100%;
     }
 </style>

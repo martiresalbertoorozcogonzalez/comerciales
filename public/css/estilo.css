@@ -1,4 +1,116 @@
-.top-bar{
-   font-size: 12px;
-   padding: 1px 5px;
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
+
+body{
+    background: rgb(236,242,248);
+}
+
+a{
+    text-decoration: none;
+}
+
+main{
+    margin-top: 120px;
+}
+
+.contenedor{
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.margen-interno{
+ padding: 40px;
+}
+
+.header{
+    background: #333333;
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
+    display: flex;
+    flex-flow: column nowrap;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+    .menu{
+        background: rgb(0,0,0,.1);
+        display: flex;
+        flex-flow: row nowrap;
+        height: 60px;
+        align-items: center;
+        border-bottom: 1px solid rgba(255,255, 255,.5);
+    }
+      .logo{
+          flex:1 1 auto;
+      }
+        .logo a{
+            color: #fff;
+            font-size: 30px;
+        }
+        .logo a:hover{
+            text-decoration: none;
+            color: red;
+        }
+      .nav{
+          flex:5 1 auto;
+      }
+         .nav a{
+             color: #fff;
+             font-size: 11px;
+             text-transform: uppercase;
+             padding: 0 10px;
+             letter-spacing: 2px;
+         }
+         .nav a:hover{
+             text-decoration: none;
+             color: red;
+         }
+       .buscar{
+           display: flex;
+       }
+         .buscar form{
+             margin: auto;
+         }
+         .buscar form > div{
+             background: #333333;
+             padding: 3px 10px 3px 10px;
+             border-radius: 30px;
+             border: 2px solid #cad3dc;
+         }
+      .social{
+          flex:1 1 auto;
+          display: flex;
+      }
+         .social a{
+             font-size: 18px;
+             color: #fff;
+             padding: 0 5px;
+         }
+         .social a:hover{
+             color: red;
+         }
+       .indice{
+            background: rgb(255, 255, 255);
+            height: 40px;
+            align-items: center;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+       }
+         .indice-lista{
+             font-size: 15px;
+             color: #333333;
+         }
+         .indice-lista:hover{
+             text-decoration: none;
+             color: red;
+         }
+
+
+

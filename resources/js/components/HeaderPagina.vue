@@ -2,7 +2,7 @@
 
 <div class="container row">
 
-    <div class="col-md-8">
+    <div class="col-md-6">
 
         <Slick ref="slick" :options="slickOptions">
             <div>
@@ -15,11 +15,12 @@
                 <img class="img-fluid" src="images/home3.jpg">
             </div>
         </Slick>
+
     </div>
 
-    <div class="col-md-4 card bg border-dark p-2">
+    <div class="col-md-5">
 
-        <div class="titulo">
+        <div>
             <h4>
                 <i class="fa fa-search"> </i>
                 <span>Buscar Cabezal</span>
@@ -66,39 +67,4 @@ export default {
     }
 }
 </script>
-
-<style scoped>
-
-.titulo{
-  background-color: black;
-}
-
-.titulo h4 {
-    height: 53px;
-}
-
-.titulo h4 i {
-    color: black;
-}
-
-.titulo h4 i {
-  background: #ff2929;
-  color: #fff;
-  display: inline-block;
-  width: 61px;
-  height: 61px;
-  line-height: 61px;
-  text-align: center;
-  font-size: 25px;
-  border-radius: 2px;
-  margin-right: 5px;
-}
-
-.titulo h4 span {
-   color: white;
-}
-
-
-
-</style>
 
