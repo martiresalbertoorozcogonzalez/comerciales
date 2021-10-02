@@ -41,9 +41,7 @@
 @include('inicio.partials.subheader')
 
 {{-- Seccion para el contenido de la pagina --}}
-<main class="">
     @yield('content')
-</main>
 
 {{-- Seccion del footer --}}
 @include('inicio.partials.footer')
