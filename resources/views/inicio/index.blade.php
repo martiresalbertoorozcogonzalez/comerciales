@@ -55,21 +55,21 @@
   
        <div class="md:px-4 md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 space-y-4 md:space-y-0">
          
-         {{-- @foreach ($cabezales as $cabezal) --}}
+         @foreach ($furgones as $furgon)
             
          <a href="#" style="text-decoration: none;" class="flex flex-wrap justify-center items-center">
           <div class="max-w-sm bg-white px-6 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-105 transition duration-500 mt-3">
             <div class="relative">
-              <img class="w-full rounded-xl" src="{{ asset('img/one-car/2.jpg') }}" alt="Imagen principal" />
+              <img class="w-full rounded-xl" src="/storage/{{$furgon->imagen_principal}}" alt="Imagen principal" />
               <p class="absolute top-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg">Furgones</p>
               <p class="absolute top-0 right-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-tr-lg rounded-bl-lg">Q45,000</p>
             </div>
-            <h1 class="mt-4 text-gray-800 text-3xl font-bold cursor-pointer text-center">Gran Danes</h1>
+            <h1 class="mt-4 text-gray-800 text-3xl font-bold cursor-pointer text-center">{{$furgon->nombre}}</h1>
             
            </div>
           </a>
 
-          {{-- @endforeach --}}
+          @endforeach
     
        </div>
 
@@ -94,21 +94,21 @@
   
        <div class="md:px-4 md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 space-y-4 md:space-y-0">
          
-         {{-- @foreach ($cabezales as $cabezal) --}}
+         @foreach ($carros as $carro)
             
          <a href="#" style="text-decoration: none;" class="flex flex-wrap justify-center items-center">
           <div class="max-w-sm bg-white px-6 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-105 transition duration-500 mt-3">
             <div class="relative">
-              <img class="w-full rounded-xl" src="{{ asset('img/one-car/2.jpg') }}" alt="Imagen principal" />
+              <img class="w-full rounded-xl" src="/storage/{{$carro->imagen_principal}}" alt="Imagen principal" />
               <p class="absolute top-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg">Furgones</p>
               <p class="absolute top-0 right-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-tr-lg rounded-bl-lg">Q45,000</p>
             </div>
-            <h1 class="mt-4 text-gray-800 text-3xl font-bold cursor-pointer text-center">Toyota Yaris</h1>
+            <h1 class="mt-4 text-gray-800 text-3xl font-bold cursor-pointer text-center">{{$carro->nombre}}</h1>
             
            </div>
           </a>
 
-          {{-- @endforeach --}}
+          @endforeach
     
        </div>
 

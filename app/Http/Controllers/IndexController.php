@@ -11,9 +11,14 @@ class IndexController extends Controller
     {
 
         $cabezales = Comercial::where("categoria_id","=",1)->get();
+        $furgones = Comercial::where("categoria_id","=",2)->get();
+        $carros = Comercial::where("categoria_id","=",4)->get();
 
         // dd($cabezales);
 
-        return view('inicio.index')->with('cabezales',$cabezales);
+        return view('inicio.index')->with('cabezales',$cabezales)
+                                   ->with('furgones',$furgones)
+                                   ->with('carros',$carros);
+
     }
 }
