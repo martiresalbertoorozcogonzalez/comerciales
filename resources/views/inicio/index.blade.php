@@ -87,8 +87,10 @@
 <section class="bg-cabezales min-h-screen mt-1 mb-1">
     <div class="container"> 
        <div class="py-6 text-center">
+
            <h2 class="text-6xl text-white font-bold">Carros</h2>
-       </div> 
+       
+        </div> 
   
        <div class="md:px-4 md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 space-y-4 md:space-y-0">
          
