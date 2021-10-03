@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/','InicioController')->name('inicio');
-
-Route::get('/index' ,'IndexController@index')->name('index');
+Route::get('/','IndexController@index')->name('inicio');
 
 Auth::routes(['verify' => true]);
 

@@ -34,11 +34,7 @@
 </div>
 @endif
 
-{{-- Seccion foto y precentacion header --}}
 @include('inicio.partials.header')
-
-{{-- Seccion cards primera precenteacion --}}
-@include('inicio.partials.subheader')
 
 {{-- Seccion para el contenido de la pagina --}}
     @yield('content')

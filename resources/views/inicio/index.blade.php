@@ -6,6 +6,8 @@
 
 @section('content')
 
+{{-- Seccion cards primera precenteacion --}}
+@include('inicio.partials.subheader')
 
 {{-- Seccion cabezales --}}
 <section class="bg-cabezales min-h-screen mt-1 mb-1">
@@ -14,95 +16,120 @@
            <h2 class="text-6xl text-white font-bold">Cabezales</h2>
        </div> 
   
-       <div class=" flex justify-center items-center">
-           <div class="md:px-4 md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 space-y-4 md:space-y-0">
-             <div class="max-w-sm bg-white px-6 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-105 transition duration-500 text-center">
-                  <a style="text-decoration:none" href="#">
-                   <div class="relative">
-                    <img class="w-full h-64 rounded-xl" src="{{ asset('img/one-car/2.jpg') }}" alt="Colors" />
-                    <p class="absolute top-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg">CARROS</p>
-                    <p class="absolute top-0 right-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-tr-lg rounded-bl-lg">Q45,000</p>
-                   </div>
-                  </a> 
-               <h1 class="mt-4 text-gray-800 text-3xl text-center font-bold cursor-pointer">titulo transporte</h1>
-             </div>
+       <div class="md:px-4 md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 space-y-4 md:space-y-0">
+         
+         @foreach ($cabezales as $cabezal)
+            
+         <a href="#" style="text-decoration: none;" class="flex flex-wrap justify-center items-center">
+          <div class="max-w-sm bg-white px-6 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-105 transition duration-500 mt-3">
+            <div class="relative">
+              <img class="w-full rounded-xl" src="/storage/{{$cabezal->imagen_principal}}" alt="Imagen principal" />
+              <p class="absolute top-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg">Cabezales</p>
+              <p class="absolute top-0 right-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-tr-lg rounded-bl-lg">{{$cabezal->precio_contado}}</p>
+            </div>
+            <h1 class="mt-4 text-gray-800 text-3xl font-bold cursor-pointer text-center">{{$cabezal->nombre}}</h1>
+            
            </div>
+          </a>
+
+          @endforeach
+    
        </div>
-       
-       <div class="text-center py-6 transform hover:scale-105 transition duration-500">
-          <a href="#" style="text-decoration:none" class="text-xl px-3 w-auto text-white bg-gradient-to-r from-red-400 to-blue-400 py-2 rounded-xl shadow-lg">Ver todos los autos</a>
-       </div>
-     </div>
+
+        <div class="text-center my-1">
+         <a href="" style="text-decoration:none;" class="boton-cabezales">
+            Ver todos los cabezales
+         </a>
+        </div>
+    </div>
+    
+
 </section>
-
-
 
   {{-- Seccion furgones --}}
-<section class="bg-furgones min-h-screen mt-1 mb-1">
+<section class="bg-cabezales min-h-screen mt-1 mb-1">
     <div class="container"> 
        <div class="py-6 text-center">
-           <h2 class="text-6xl text-white font-bold">Furgones</h2>
+           <h2 class="text-6xl text-white font-bold">furgones</h2>
        </div> 
   
-       <div class=" flex justify-center items-center">
-           <div class="md:px-4 md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 space-y-4 md:space-y-0">
-               <div class="max-w-sm bg-white px-6 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-105 transition duration-500 text-center">
-                  <a style="text-decoration:none" href="#">
-                   <div class="relative">
-                    <img class="w-full h-64 rounded-xl" src="{{ asset('img/one-car/2.jpg') }}" alt="Colors" />
-                    <p class="absolute top-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg">CARROS</p>
-                    <p class="absolute top-0 right-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-tr-lg rounded-bl-lg">Q45,000</p>
-                   </div>
-                  </a> 
-               <h1 class="mt-4 text-gray-800 text-3xl text-center font-bold cursor-pointer">titulo transporte</h1>
+       <div class="md:px-4 md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 space-y-4 md:space-y-0">
+         
+         {{-- @foreach ($cabezales as $cabezal) --}}
+            
+         <a href="#" style="text-decoration: none;" class="flex flex-wrap justify-center items-center">
+          <div class="max-w-sm bg-white px-6 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-105 transition duration-500 mt-3">
+            <div class="relative">
+              <img class="w-full rounded-xl" src="{{ asset('img/one-car/2.jpg') }}" alt="Imagen principal" />
+              <p class="absolute top-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg">Furgones</p>
+              <p class="absolute top-0 right-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-tr-lg rounded-bl-lg">Q45,000</p>
+            </div>
+            <h1 class="mt-4 text-gray-800 text-3xl font-bold cursor-pointer text-center">Gran Danes</h1>
+            
            </div>
-         </div>
-       </div>
-       
-       <div class="text-center py-6 transform hover:scale-105 transition duration-500">
-          <a href="#" style="text-decoration:none" class="text-xl px-3 w-auto text-white bg-gradient-to-r from-red-400 to-blue-400 py-2 rounded-xl shadow-lg">Ver todos los autos</a>
-       </div>
-     </div>
-</section>
+          </a>
 
+          {{-- @endforeach --}}
+    
+       </div>
+
+        <div class="text-center my-1">
+         <a href="" style="text-decoration:none;" class="boton-cabezales">
+            Ver todos los Furgones
+         </a>
+        </div>
+    </div>
+    
+
+</section>
 
 {{-- Seccion carros --}}
-<section class="bg-carros min-h-screen mt-1 mb-1">
-  <div class="container"> 
-     <div class="py-6 text-center">
-         <h2 class="text-6xl text-white font-bold">Carros</h2>
-     </div> 
+<section class="bg-cabezales min-h-screen mt-1 mb-1">
+    <div class="container"> 
+       <div class="py-6 text-center">
+           <h2 class="text-6xl text-white font-bold">Carros</h2>
+       </div> 
+  
+       <div class="md:px-4 md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 space-y-4 md:space-y-0">
+         
+         {{-- @foreach ($cabezales as $cabezal) --}}
+            
+         <a href="#" style="text-decoration: none;" class="flex flex-wrap justify-center items-center">
+          <div class="max-w-sm bg-white px-6 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-105 transition duration-500 mt-3">
+            <div class="relative">
+              <img class="w-full rounded-xl" src="{{ asset('img/one-car/2.jpg') }}" alt="Imagen principal" />
+              <p class="absolute top-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg">Furgones</p>
+              <p class="absolute top-0 right-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-tr-lg rounded-bl-lg">Q45,000</p>
+            </div>
+            <h1 class="mt-4 text-gray-800 text-3xl font-bold cursor-pointer text-center">Toyota Yaris</h1>
+            
+           </div>
+          </a>
 
-     <div class=" flex justify-center items-center">
-         <div class="md:px-4 md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 space-y-4 md:space-y-0">
-             <div class="max-w-sm bg-white px-6 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-105 transition duration-500 text-center">
-                <a style="text-decoration:none" href="#">
-                 <div class="relative">
-                  <img class="w-full h-64 rounded-xl" src="{{ asset('img/one-car/2.jpg') }}" alt="Colors" />
-                  <p class="absolute top-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg">CARROS</p>
-                  <p class="absolute top-0 right-0 bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-tr-lg rounded-bl-lg">Q45,000</p>
-                 </div>
-                </a> 
-             <h1 class="mt-4 text-gray-800 text-3xl text-center font-bold cursor-pointer">titulo transporte</h1>
-         </div>
+          {{-- @endforeach --}}
+    
        </div>
-     </div>
-     
-     <div class="text-center py-6 transform hover:scale-105 transition duration-500">
-        <a href="#" style="text-decoration:none" class="text-xl px-3 w-auto text-white bg-gradient-to-r from-red-400 to-blue-400 py-2 rounded-xl shadow-lg">Ver todos los autos</a>
-     </div>
-   </div>
+
+        <div class="text-center my-1">
+         <a href="" style="text-decoration:none;" class="boton-cabezales">
+            Ver todos los carros
+         </a>
+        </div>
+    </div>
+    
+
 </section>
 
-{{-- Seccion de contacto --}}
 <!-- Seccion de contacto -->
 <section class="pt-20 pb-36 px-8 bg-blueGray-500">
     <div class="relative flex items-top justify-center min-h-screen bg-white dark:bg-gray-900 sm:items-center sm:pt-0 pb-7">
         <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
             <div class="mt-8 overflow-hidden">
                 <div class="grid grid-cols-1 md:grid-cols-2">
-                    <div class="p-6 mr-2 bg-gray-100 dark:bg-gray-800 sm:rounded-lg">
-                       
+                    <div class="p-6 mr-2 bg-gray-100 dark:bg-gray-800 sm:rounded-lg text-center">
+                        <div class="flex justify-center">
+                            <img class="h-25 w-25" src="{{ asset('img/LogoTransVentas33.png') }}" alt="">
+                        </div>
                         <h3 class="text-2xl sm:text-5xl text-gray-800 dark:text-white font-extrabold tracking-tight">
                             Contactanos
                         </h3>
