@@ -16,24 +16,24 @@ class CategoriaSeeder extends Seeder
     {
 
         DB::table('categorias')->insert([
-            'nombre' => 'Pagina-informativa',
-              'slug' => Str::slug('pagina-informativa'),
+            'nombre' => 'cabezal',
+              'slug' => Str::slug('cabezal'),
              'created_at' => Carbon::now(),
              'updated_at' => Carbon::now(),
         ]);
 
 
         DB::table('categorias')->insert([
-            'nombre' => 'Pagina-portafolio',
-              'slug' => Str::slug('pagina-portafolio'),
+            'nombre' => 'carro',
+              'slug' => Str::slug('carro'),
              'created_at' => Carbon::now(),
              'updated_at' => Carbon::now(),
         ]);
 
 
         DB::table('categorias')->insert([
-            'nombre' => 'Pagina-ecommerce',
-              'slug' => Str::slug('pagina-ecommerce'),
+            'nombre' => 'furgon',
+              'slug' => Str::slug('furgon'),
              'created_at' => Carbon::now(),
              'updated_at' => Carbon::now(),
         ]);

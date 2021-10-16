@@ -6,21 +6,23 @@
 
 @section('content')
 
+@include('inicio.partials.header')
+
 {{-- Seccion cards primera precenteacion --}}
 @include('inicio.partials.subheader')
 
 {{-- Seccion cabezales --}}
-<section class="bg-cabezales min-h-screen mt-1 mb-1">
+<section class="bg-white min-h-screen mt-1 mb-1">
     <div class="container"> 
        <div class="py-6 text-center">
-           <h2 class="text-6xl text-white font-bold">Cabezales</h2>
+           <h2 class="text-6xl text-white font-bold">Ultimos Cabezales</h2>
        </div> 
   
        <div class="md:px-4 md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 space-y-4 md:space-y-0">
          
          @foreach ($cabezales as $cabezal)
             
-         <a href="#" style="text-decoration: none;" class="flex flex-wrap justify-center items-center">
+         <a href="{{ route('ver.cabezal',['comercial' => $cabezal->id]) }}" style="text-decoration: none;" class="flex flex-wrap justify-center items-center">
           <div class="max-w-sm bg-white px-6 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-105 transition duration-500 mt-3">
             <div class="relative">
               <img class="w-full rounded-xl" src="/storage/{{$cabezal->imagen_principal}}" alt="Imagen principal" />
@@ -37,7 +39,7 @@
        </div>
 
         <div class="text-center my-1">
-         <a href="" style="text-decoration:none;" class="boton-cabezales">
+         <a href="{{ route('ver.cabezales') }}" style="text-decoration:none;" class="boton-cabezales">
             Ver todos los cabezales
          </a>
         </div>
@@ -47,7 +49,7 @@
 </section>
 
   {{-- Seccion furgones --}}
-<section class="bg-cabezales min-h-screen mt-1 mb-1">
+<section class="bg-blueGray-500 min-h-screen mt-1 mb-1">
     <div class="container"> 
        <div class="py-6 text-center">
            <h2 class="text-6xl text-white font-bold">furgones</h2>
@@ -84,7 +86,7 @@
 </section>
 
 {{-- Seccion carros --}}
-<section class="bg-cabezales min-h-screen mt-1 mb-1">
+<section class="bg-white min-h-screen mt-1 mb-1">
     <div class="container"> 
        <div class="py-6 text-center">
 

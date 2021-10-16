@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\IndexController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +17,12 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/','IndexController@index')->name('inicio');
+
+//Ruta para mostrar un solo cabezal
+Route::get('/cabezal/{comercial}', [IndexController::class, 'vercabezal'])->name('ver.cabezal');
+
+//Ruta para mostrar el resto de transporte segun id
+Route::get('/cabezales', [IndexController::class, 'vercabezales'])->name('ver.cabezales');
 
 Auth::routes(['verify' => true]);
 

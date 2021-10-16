@@ -21,4 +21,17 @@ class IndexController extends Controller
                                    ->with('carros',$carros);
 
     }
+
+    public function vercabezal(Comercial $comercial)
+    {   
+        return view('inicio.cabezales.vercabezal')->with('comercial',$comercial);
+    }
+
+    public function vercabezales(Comercial $comercial)
+    {
+
+        $cabezales = Comercial::where("categoria_id","=",1)->get();
+
+        return view('inicio.cabezales.vercabezales')->with('cabezales', $cabezales);
+    }
 }

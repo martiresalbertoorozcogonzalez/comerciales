@@ -34,7 +34,6 @@
 </div>
 @endif
 
-@include('inicio.partials.header')
 
 {{-- Seccion para el contenido de la pagina --}}
     @yield('content')

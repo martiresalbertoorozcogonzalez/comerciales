@@ -2,7 +2,7 @@
 <section class="relative  bg-blueGray-50">
 
     <div class="pt-16 pb-32 min-h-screen-75">
-     <div class="bg-cabezaldos absolute top-0 w-full h-full bg-center bg-cover">
+     <div class="bg-cabezaltres absolute top-0 w-full h-full bg-center bg-cover">
         <span id="blackOverlay" class="w-full h-full absolute opacity-50 bg-black"></span>
      </div>
      <div class="text-center relative mx-auto">

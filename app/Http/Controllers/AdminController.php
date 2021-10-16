@@ -53,7 +53,7 @@ class AdminController extends Controller
            'categoria_id' => 'required|exists:App\Categoria,id',
            'condicion_id' => 'required|exists:App\Condicion,id',
            'modelo_id' => 'required|exists:App\Modelo,id',
-           'imagen_principal' => 'required|image|max:1000',
+           'imagen_principal' => 'required|image|max:10000',
            'precio_contado' => 'required',
            'precio_financiado' => 'required',
            'millaje' => 'required',

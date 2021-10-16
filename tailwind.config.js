@@ -15,6 +15,7 @@ module.exports = {
       backgroundImage: {
         'cabezales': 'url(/img/cabezal.jpg)',
         'cabezaldos': 'url(/img/cabezal2.jpg)',
+        'cabezaltres': 'url(/img/cabezal3.jpg)',
         'furgones': 'url(/img/furgones.jpg)',
         'carros': 'url(/img/carros.jpg)',
       },
