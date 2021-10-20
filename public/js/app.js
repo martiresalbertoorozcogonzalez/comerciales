@@ -2630,6 +2630,46 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GaleriaCabezales.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/GaleriaCabezales.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GaleriaImagenes.vue?vue&type=script&lang=js&":
 /*!**************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/GaleriaImagenes.vue?vue&type=script&lang=js& ***!
@@ -7427,7 +7467,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".titulo[data-v-27b22b4a]{\n  font-size:45px;\n}\n.card-title[data-v-27b22b4a]{\n  color: black;\n}\n", ""]);
+exports.push([module.i, ".titulo[data-v-27b22b4a]{\n  font-size:45px;\n}\n.card-title[data-v-27b22b4a]{\n  color: black;\n}\r\n", ""]);
 
 // exports
 
@@ -7446,7 +7486,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".titulo[data-v-5f66630c]{\n  font-size:45px;\n}\n.card-title[data-v-5f66630c]{\n  color: black;\n}\n", ""]);
+exports.push([module.i, ".titulo[data-v-5f66630c]{\n  font-size:45px;\n}\n.card-title[data-v-5f66630c]{\n  color: black;\n}\r\n", ""]);
 
 // exports
 
@@ -7465,7 +7505,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".titulo[data-v-c13344ee]{\n  font-size:45px;\n}\n.card-title[data-v-c13344ee]{\n  color: black;\n}\n", ""]);
+exports.push([module.i, ".titulo[data-v-c13344ee]{\n  font-size:45px;\n}\n.card-title[data-v-c13344ee]{\n  color: black;\n}\r\n", ""]);
 
 // exports
 
@@ -7522,7 +7562,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://unpkg.com/leaflet@1.6.0/dist/leaflet.css);", ""]);
 
 // module
-exports.push([module.i, ".mapa[data-v-2411da3f] {\n  height:300px;\n  width: 100%;\n}\n", ""]);
+exports.push([module.i, ".mapa[data-v-2411da3f] {\n  height:300px;\n  width: 100%;\n}\r\n", ""]);
 
 // exports
 
@@ -53628,9 +53668,9 @@ var render = function() {
               [
                 _c("h3", { staticClass: "card-title font-weight-bold" }, [
                   _vm._v(
-                    "\n                         " +
+                    "\r\n                         " +
                       _vm._s(cabezal.nombre) +
-                      "\n                     "
+                      "\r\n                     "
                   )
                 ]),
                 _vm._v(" "),
@@ -53639,11 +53679,11 @@ var render = function() {
                     _vm._v("Horario:")
                   ]),
                   _vm._v(
-                    "\n                         " +
+                    "\r\n                         " +
                       _vm._s(cabezal.apertura) +
                       "  -  " +
                       _vm._s(cabezal.cierre) +
-                      "\n                     "
+                      "\r\n                     "
                   )
                 ]),
                 _vm._v(" "),
@@ -53715,9 +53755,9 @@ var render = function() {
               [
                 _c("h3", { staticClass: "card-title font-weight-bold" }, [
                   _vm._v(
-                    "\n                         " +
+                    "\r\n                         " +
                       _vm._s(carro.nombre) +
-                      "\n                     "
+                      "\r\n                     "
                   )
                 ]),
                 _vm._v(" "),
@@ -53726,11 +53766,11 @@ var render = function() {
                     _vm._v("Horario:")
                   ]),
                   _vm._v(
-                    "\n                         " +
+                    "\r\n                         " +
                       _vm._s(carro.apertura) +
                       "  -  " +
                       _vm._s(carro.cierre) +
-                      "\n                     "
+                      "\r\n                     "
                   )
                 ]),
                 _vm._v(" "),
@@ -53802,9 +53842,9 @@ var render = function() {
               [
                 _c("h3", { staticClass: "card-title font-weight-bold" }, [
                   _vm._v(
-                    "\n                         " +
+                    "\r\n                         " +
                       _vm._s(furgon.nombre) +
-                      "\n                     "
+                      "\r\n                     "
                   )
                 ]),
                 _vm._v(" "),
@@ -53813,11 +53853,11 @@ var render = function() {
                     _vm._v("Horario:")
                   ]),
                   _vm._v(
-                    "\n                         " +
+                    "\r\n                         " +
                       _vm._s(furgon.apertura) +
                       "  -  " +
                       _vm._s(furgon.cierre) +
-                      "\n                     "
+                      "\r\n                     "
                   )
                 ]),
                 _vm._v(" "),
@@ -53845,6 +53885,83 @@ var render = function() {
   ])
 }
 var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GaleriaCabezales.vue?vue&type=template&id=77581134&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/GaleriaCabezales.vue?vue&type=template&id=77581134& ***!
+  \*******************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "flex flex-row bg-white mt-1 mb-1 mx-3 py-2 px-2 gap-3" },
+      [
+        _c("div", [
+          _c("img", {
+            staticClass: "w-48 h-20",
+            attrs: { src: "img/cabezal.jpg", alt: "" }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c("img", {
+            staticClass: "w-48 h-20",
+            attrs: { src: "img/cabezal.jpg", alt: "" }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c("img", {
+            staticClass: "w-48 h-20",
+            attrs: { src: "img/cabezal.jpg", alt: "" }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c("img", {
+            staticClass: "w-48 h-20",
+            attrs: { src: "img/cabezal.jpg", alt: "" }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c("img", {
+            staticClass: "w-48 h-20",
+            attrs: { src: "img/cabezal.jpg", alt: "" }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c("img", {
+            staticClass: "w-48 h-20",
+            attrs: { src: "img/cabezal.jpg", alt: "" }
+          })
+        ])
+      ]
+    )
+  }
+]
 render._withStripped = true
 
 
@@ -86772,6 +86889,8 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('pagina-inicio', __webpack_require__(/*! ./components/PaginaInicio.vue */ "./resources/js/components/PaginaInicio.vue")["default"]);
+Vue.component('galeria-cabezales', __webpack_require__(/*! ./components/GaleriaCabezales.vue */ "./resources/js/components/GaleriaCabezales.vue")["default"]);
+Vue.component('galeria-imagenes', __webpack_require__(/*! ./components/GaleriaImagenes.vue */ "./resources/js/components/GaleriaImagenes.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -87090,6 +87209,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaFurgones_vue_vue_type_template_id_c13344ee_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaFurgones_vue_vue_type_template_id_c13344ee_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/GaleriaCabezales.vue":
+/*!******************************************************!*\
+  !*** ./resources/js/components/GaleriaCabezales.vue ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _GaleriaCabezales_vue_vue_type_template_id_77581134___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GaleriaCabezales.vue?vue&type=template&id=77581134& */ "./resources/js/components/GaleriaCabezales.vue?vue&type=template&id=77581134&");
+/* harmony import */ var _GaleriaCabezales_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GaleriaCabezales.vue?vue&type=script&lang=js& */ "./resources/js/components/GaleriaCabezales.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _GaleriaCabezales_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _GaleriaCabezales_vue_vue_type_template_id_77581134___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _GaleriaCabezales_vue_vue_type_template_id_77581134___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/GaleriaCabezales.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/GaleriaCabezales.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/GaleriaCabezales.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GaleriaCabezales_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./GaleriaCabezales.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GaleriaCabezales.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GaleriaCabezales_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/GaleriaCabezales.vue?vue&type=template&id=77581134&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/components/GaleriaCabezales.vue?vue&type=template&id=77581134& ***!
+  \*************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GaleriaCabezales_vue_vue_type_template_id_77581134___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./GaleriaCabezales.vue?vue&type=template&id=77581134& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GaleriaCabezales.vue?vue&type=template&id=77581134&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GaleriaCabezales_vue_vue_type_template_id_77581134___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GaleriaCabezales_vue_vue_type_template_id_77581134___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -87797,8 +87985,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\laragon\www\Comercial\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\laragon\www\Comercial\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! M:\programas-web\Laravel\comerciales\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! M:\programas-web\Laravel\comerciales\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

@@ -22,6 +22,8 @@ import router from './router';
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('pagina-inicio', require('./components/PaginaInicio.vue').default);
+Vue.component('galeria-cabezales', require('./components/GaleriaCabezales.vue').default);
+Vue.component('galeria-imagenes', require('./components/GaleriaImagenes.vue').default);
 
 
 

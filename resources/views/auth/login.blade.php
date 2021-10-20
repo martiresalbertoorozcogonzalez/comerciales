@@ -4,9 +4,6 @@
 <div class="container" style="margin-top: 20px;">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="flex justify-center">
-                <img class="h-25 w-25" src="{{ asset('img/LogoTransVentas33.png') }}" alt="">
-            </div>
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
 
