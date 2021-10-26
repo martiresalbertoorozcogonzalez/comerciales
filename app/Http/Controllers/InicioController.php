@@ -14,7 +14,7 @@ class InicioController extends Controller
      */
     public function __invoke(Request $request)
     {
-     return view('inicio.index');
+       return view('inicio.index');
     }
 
 

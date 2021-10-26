@@ -1,6 +1,6 @@
 <template>
 <div class="container mt-5 justify-content-center">
-      <h1 class="titulo">Carros</h1>
+      <h1 class="text-5xl text-center text-gray-900 font mb-5">Ultimos carros</h1>
 
       <div class="row">
           <div class="col-md-4 mt-4" v-for=" carro in this.carros" v-bind:key="carro.id">
@@ -32,7 +32,7 @@
 <script>
 export default {
     mounted() {
-      axios.get('/api/categorias/carros')
+      axios.get('/api/categorias/carro')
          .then(respuesta => {
              this.$store.commit("AGREGAR_CARROS",respuesta.data);
          })

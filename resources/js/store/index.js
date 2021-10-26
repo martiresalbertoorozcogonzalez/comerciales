@@ -14,11 +14,11 @@ export default new Vuex.Store({
      categoria:'',
    },
    mutations: {
-      AGREGAR_CARROS(state, carros) {
-          state.carros = carros;
-      },
       AGREGAR_CABEZALES(state, cabezales) {
           state.cabezales = cabezales;
+      },
+      AGREGAR_CARROS(state, carros) {
+          state.carros = carros;
       },
       AGREGAR_FURGONES(state, furgones) {
         state.furgones = furgones;

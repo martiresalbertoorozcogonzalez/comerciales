@@ -1,6 +1,7 @@
 <template>
-<div class="container mt-5 justify-content-center">
-      <h1 class="titulo">Furgones</h1>
+
+<div class="container mt-5 justify-content-center pt-10 pb-4 px-3">
+      <h1 class="text-5xl text-center text-white font mb-5">Ultimos furgones</h1>
 
       <div class="row">
           <div class="col-md-4 mt-4" v-for=" furgon in this.furgones" v-bind:key="furgon.id">
@@ -32,7 +33,7 @@
 <script>
 export default {
     mounted() {
-      axios.get('/api/categorias/furgones')
+      axios.get('/api/categorias/furgon')
          .then(respuesta => {
              this.$store.commit("AGREGAR_FURGONES",respuesta.data);
          })

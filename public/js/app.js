@@ -2499,11 +2499,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     var _this = this;
 
-    axios.get('/api/categorias/cabezales').then(function (respuesta) {
+    axios.get('/api/categorias/cabezal').then(function (respuesta) {
       _this.$store.commit("AGREGAR_CABEZALES", respuesta.data);
     });
   },
@@ -2560,7 +2561,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    axios.get('/api/categorias/carros').then(function (respuesta) {
+    axios.get('/api/categorias/carro').then(function (respuesta) {
       _this.$store.commit("AGREGAR_CARROS", respuesta.data);
     });
   },
@@ -2613,11 +2614,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     var _this = this;
 
-    axios.get('/api/categorias/furgones').then(function (respuesta) {
+    axios.get('/api/categorias/furgon').then(function (respuesta) {
       _this.$store.commit("AGREGAR_FURGONES", respuesta.data);
     });
   },
@@ -2627,46 +2629,6 @@ __webpack_require__.r(__webpack_exports__);
     }
   }
 });
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GaleriaCabezales.vue?vue&type=script&lang=js&":
-/*!***************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/GaleriaCabezales.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
 
@@ -2812,6 +2774,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 
@@ -2820,9 +2784,9 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     HeaderPagina: _HeaderPagina__WEBPACK_IMPORTED_MODULE_0__["default"],
     // ListadoCategorias,
-    CategoriaCabezales: _CategoriaCabezales__WEBPACK_IMPORTED_MODULE_1__["default"],
     CategoriaFurgones: _CategoriaFurgones__WEBPACK_IMPORTED_MODULE_2__["default"],
-    CategoriaCarros: _CategoriaCarros__WEBPACK_IMPORTED_MODULE_3__["default"]
+    CategoriaCarros: _CategoriaCarros__WEBPACK_IMPORTED_MODULE_3__["default"],
+    CategoriaCabezales: _CategoriaCabezales__WEBPACK_IMPORTED_MODULE_1__["default"]
   }
 });
 
@@ -2883,19 +2847,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MapaUbicacion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MapaUbicacion */ "./resources/js/components/MapaUbicacion.vue");
 /* harmony import */ var _GaleriaImagenes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GaleriaImagenes */ "./resources/js/components/GaleriaImagenes.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -53646,7 +53597,9 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container mt-5 justify-content-center" }, [
-    _c("h1", { staticClass: "titulo" }, [_vm._v("Cabezales")]),
+    _c("h1", { staticClass: "text-5xl text-center text-gray-900 font mb-5" }, [
+      _vm._v("Ultimos cabezales")
+    ]),
     _vm._v(" "),
     _c(
       "div",
@@ -53670,19 +53623,6 @@ var render = function() {
                   _vm._v(
                     "\r\n                         " +
                       _vm._s(cabezal.nombre) +
-                      "\r\n                     "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "card-text" }, [
-                  _c("span", { staticClass: "font-weight-bold" }, [
-                    _vm._v("Horario:")
-                  ]),
-                  _vm._v(
-                    "\r\n                         " +
-                      _vm._s(cabezal.apertura) +
-                      "  -  " +
-                      _vm._s(cabezal.cierre) +
                       "\r\n                     "
                   )
                 ]),
@@ -53733,7 +53673,9 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container mt-5 justify-content-center" }, [
-    _c("h1", { staticClass: "titulo" }, [_vm._v("Carros")]),
+    _c("h1", { staticClass: "text-5xl text-center text-gray-900 font mb-5" }, [
+      _vm._v("Ultimos carros")
+    ]),
     _vm._v(" "),
     _c(
       "div",
@@ -53819,149 +53761,78 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container mt-5 justify-content-center" }, [
-    _c("h1", { staticClass: "titulo" }, [_vm._v("Furgones")]),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "row" },
-      _vm._l(this.furgones, function(furgon) {
-        return _c("div", { key: furgon.id, staticClass: "col-md-4 mt-4" }, [
-          _c("div", { staticClass: "card bg border-dark p-2" }, [
-            _c("img", {
-              staticClass: "card-img-top",
-              attrs: {
-                src: "storage/" + furgon.imagen_principal,
-                alt: "card del cabezal"
-              }
-            }),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "card-body" },
-              [
-                _c("h3", { staticClass: "card-title font-weight-bold" }, [
-                  _vm._v(
-                    "\r\n                         " +
-                      _vm._s(furgon.nombre) +
-                      "\r\n                     "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "card-text" }, [
-                  _c("span", { staticClass: "font-weight-bold" }, [
-                    _vm._v("Horario:")
+  return _c(
+    "div",
+    { staticClass: "container mt-5 justify-content-center pt-10 pb-4 px-3" },
+    [
+      _c("h1", { staticClass: "text-5xl text-center text-white font mb-5" }, [
+        _vm._v("Ultimos furgones")
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "row" },
+        _vm._l(this.furgones, function(furgon) {
+          return _c("div", { key: furgon.id, staticClass: "col-md-4 mt-4" }, [
+            _c("div", { staticClass: "card bg border-dark p-2" }, [
+              _c("img", {
+                staticClass: "card-img-top",
+                attrs: {
+                  src: "storage/" + furgon.imagen_principal,
+                  alt: "card del cabezal"
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "card-body" },
+                [
+                  _c("h3", { staticClass: "card-title font-weight-bold" }, [
+                    _vm._v(
+                      "\r\n                         " +
+                        _vm._s(furgon.nombre) +
+                        "\r\n                     "
+                    )
                   ]),
-                  _vm._v(
-                    "\r\n                         " +
-                      _vm._s(furgon.apertura) +
-                      "  -  " +
-                      _vm._s(furgon.cierre) +
-                      "\r\n                     "
+                  _vm._v(" "),
+                  _c("p", { staticClass: "card-text" }, [
+                    _c("span", { staticClass: "font-weight-bold" }, [
+                      _vm._v("Horario:")
+                    ]),
+                    _vm._v(
+                      "\r\n                         " +
+                        _vm._s(furgon.apertura) +
+                        "  -  " +
+                        _vm._s(furgon.cierre) +
+                        "\r\n                     "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "router-link",
+                    {
+                      attrs: {
+                        to: { name: "comercial", params: { id: furgon.id } }
+                      }
+                    },
+                    [
+                      _c("a", { staticClass: "btn btn-danger d-block" }, [
+                        _vm._v("Informacion")
+                      ])
+                    ]
                   )
-                ]),
-                _vm._v(" "),
-                _c(
-                  "router-link",
-                  {
-                    attrs: {
-                      to: { name: "comercial", params: { id: furgon.id } }
-                    }
-                  },
-                  [
-                    _c("a", { staticClass: "btn btn-danger d-block" }, [
-                      _vm._v("Informacion")
-                    ])
-                  ]
-                )
-              ],
-              1
-            )
+                ],
+                1
+              )
+            ])
           ])
-        ])
-      }),
-      0
-    )
-  ])
+        }),
+        0
+      )
+    ]
+  )
 }
 var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GaleriaCabezales.vue?vue&type=template&id=77581134&":
-/*!*******************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/GaleriaCabezales.vue?vue&type=template&id=77581134& ***!
-  \*******************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "flex flex-row bg-white mt-1 mb-1 mx-3 py-2 px-2 gap-3" },
-      [
-        _c("div", [
-          _c("img", {
-            staticClass: "w-48 h-20",
-            attrs: { src: "img/cabezal.jpg", alt: "" }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c("img", {
-            staticClass: "w-48 h-20",
-            attrs: { src: "img/cabezal.jpg", alt: "" }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c("img", {
-            staticClass: "w-48 h-20",
-            attrs: { src: "img/cabezal.jpg", alt: "" }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c("img", {
-            staticClass: "w-48 h-20",
-            attrs: { src: "img/cabezal.jpg", alt: "" }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c("img", {
-            staticClass: "w-48 h-20",
-            attrs: { src: "img/cabezal.jpg", alt: "" }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c("img", {
-            staticClass: "w-48 h-20",
-            attrs: { src: "img/cabezal.jpg", alt: "" }
-          })
-        ])
-      ]
-    )
-  }
-]
 render._withStripped = true
 
 
@@ -54135,11 +54006,16 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "container", attrs: { id: "inicio" } },
+    { attrs: { id: "inicio" } },
     [
       _c("categoria-cabezales"),
       _vm._v(" "),
-      _c("categoria-furgones"),
+      _c(
+        "div",
+        { staticClass: "bg-blueGray-500" },
+        [_c("categoria-furgones")],
+        1
+      ),
       _vm._v(" "),
       _c("categoria-carros")
     ],
@@ -54237,21 +54113,6 @@ var render = function() {
         ]),
         _vm._v(" "),
         _c("aside", { staticClass: "col-md-5 order-2" }, [
-          _c("div", { staticClass: "p-4 bg-dark" }, [
-            _c("h2", { staticClass: "text-center text-white mt-2 mb-4" }, [
-              _vm._v("Descripcion")
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "text-white mt-1" }, [
-              _c("br"),
-              _vm._v(
-                "\n                  " +
-                  _vm._s(_vm.comercial.descripcion) +
-                  "\n              "
-              )
-            ])
-          ]),
-          _vm._v(" "),
           _c("div", { staticClass: "p-4 bg-danger" }, [
             _c("h2", { staticClass: "text-center text-white mt-2 mb-4" }, [
               _vm._v("Descripcion")
@@ -86889,7 +86750,6 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('pagina-inicio', __webpack_require__(/*! ./components/PaginaInicio.vue */ "./resources/js/components/PaginaInicio.vue")["default"]);
-Vue.component('galeria-cabezales', __webpack_require__(/*! ./components/GaleriaCabezales.vue */ "./resources/js/components/GaleriaCabezales.vue")["default"]);
 Vue.component('galeria-imagenes', __webpack_require__(/*! ./components/GaleriaImagenes.vue */ "./resources/js/components/GaleriaImagenes.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -87209,75 +87069,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaFurgones_vue_vue_type_template_id_c13344ee_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CategoriaFurgones_vue_vue_type_template_id_c13344ee_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/components/GaleriaCabezales.vue":
-/*!******************************************************!*\
-  !*** ./resources/js/components/GaleriaCabezales.vue ***!
-  \******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _GaleriaCabezales_vue_vue_type_template_id_77581134___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GaleriaCabezales.vue?vue&type=template&id=77581134& */ "./resources/js/components/GaleriaCabezales.vue?vue&type=template&id=77581134&");
-/* harmony import */ var _GaleriaCabezales_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GaleriaCabezales.vue?vue&type=script&lang=js& */ "./resources/js/components/GaleriaCabezales.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _GaleriaCabezales_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _GaleriaCabezales_vue_vue_type_template_id_77581134___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _GaleriaCabezales_vue_vue_type_template_id_77581134___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/GaleriaCabezales.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/GaleriaCabezales.vue?vue&type=script&lang=js&":
-/*!*******************************************************************************!*\
-  !*** ./resources/js/components/GaleriaCabezales.vue?vue&type=script&lang=js& ***!
-  \*******************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GaleriaCabezales_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./GaleriaCabezales.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GaleriaCabezales.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GaleriaCabezales_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/GaleriaCabezales.vue?vue&type=template&id=77581134&":
-/*!*************************************************************************************!*\
-  !*** ./resources/js/components/GaleriaCabezales.vue?vue&type=template&id=77581134& ***!
-  \*************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GaleriaCabezales_vue_vue_type_template_id_77581134___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./GaleriaCabezales.vue?vue&type=template&id=77581134& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GaleriaCabezales.vue?vue&type=template&id=77581134&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GaleriaCabezales_vue_vue_type_template_id_77581134___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GaleriaCabezales_vue_vue_type_template_id_77581134___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
@@ -87924,11 +87715,11 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
     categoria: ''
   },
   mutations: {
-    AGREGAR_CARROS: function AGREGAR_CARROS(state, carros) {
-      state.carros = carros;
-    },
     AGREGAR_CABEZALES: function AGREGAR_CABEZALES(state, cabezales) {
       state.cabezales = cabezales;
+    },
+    AGREGAR_CARROS: function AGREGAR_CARROS(state, carros) {
+      state.carros = carros;
     },
     AGREGAR_FURGONES: function AGREGAR_FURGONES(state, furgones) {
       state.furgones = furgones;

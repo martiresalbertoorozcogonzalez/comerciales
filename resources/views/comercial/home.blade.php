@@ -14,7 +14,7 @@
             <div class="inner text-center">
             <h3><i class="nav-icon fas fa-image"></i></h3>
 
-            <p> Crear Publicacion</p>
+            <p>Publicacion</p>
             </div>
             <div class="icon">
             <i class="ion ion-pie-graph"></i>

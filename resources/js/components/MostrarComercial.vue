@@ -14,17 +14,6 @@
            <aside class="col-md-5 order-2">
 
 
-               <div class="p-4 bg-dark">
-                 <h2 class="text-center text-white mt-2 mb-4">Descripcion</h2>
-
-                 <p class="text-white mt-1">
-                     <br>
-                     {{comercial.descripcion}}
-                 </p>
-
-               </div>
-
-
                <div class="p-4 bg-danger">
 
                  <h2 class="text-center text-white mt-2 mb-4">Descripcion</h2>
@@ -66,8 +55,6 @@
 
 
        </div>
-
-
 
          <galeria-imagenes></galeria-imagenes>
 
