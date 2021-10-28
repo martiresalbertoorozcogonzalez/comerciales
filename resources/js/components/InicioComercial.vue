@@ -1,5 +1,5 @@
 <template>
- <div  id="inicio">
+ <div>
 
      <categoria-cabezales></categoria-cabezales>
 <div class="bg-blueGray-500">

@@ -1,5 +1,5 @@
 {{-- Seccion del footer --}}
-<footer class="relative pt-3 pb-2 mt-1 bg-blueGray-900">
+<footer class="relative pt-3 pb-2  bg-blueGray-900">
     <div class="container mx-auto px-4">
         <div class="flex flex-wrap items-center md:justify-between justify-center">
             <div class="w-full px-4 mx-auto text-center">

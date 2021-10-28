@@ -2874,42 +2874,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -7475,7 +7439,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css);", ""]);
 
 // module
-exports.push([module.i, "img[data-v-2fcfb43d]{\n  max-width: 80px;\n}\n\n", ""]);
+exports.push([module.i, "\n", ""]);
 
 // exports
 
@@ -53854,14 +53818,15 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h2", { staticClass: "mt-4" }, [_vm._v(" Galeria de Imagenes")]),
-    _vm._v(" "),
-    _c(
-      "ul",
-      { staticClass: "row list-unstyled mt-4" },
+  return _c(
+    "div",
+    [
+      _c("h2", { staticClass: "text-center text-3xl text-gray-900" }, [
+        _vm._v("Galeria imagenes")
+      ]),
+      _vm._v(" "),
       _vm._l(_vm.imagenes, function(imagen) {
-        return _c("li", { key: imagen.id, staticClass: "col-md-1" }, [
+        return _c("div", { key: imagen.id }, [
           _c(
             "a",
             {
@@ -53873,16 +53838,16 @@ var render = function() {
             },
             [
               _c("img", {
-                staticClass: "img-fluid",
+                staticClass: "w-full p-3",
                 attrs: { src: "/storage/" + imagen.ruta_imagen, alt: "" }
               })
             ]
           )
         ])
-      }),
-      0
-    )
-  ])
+      })
+    ],
+    2
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -54006,7 +53971,6 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { attrs: { id: "inicio" } },
     [
       _c("categoria-cabezales"),
       _vm._v(" "),
@@ -54091,82 +54055,43 @@ var render = function() {
     { staticClass: "container my-5" },
     [
       _c("center", [
-        _c(
-          "h1",
-          {
-            staticClass: "text-centermb-5",
-            staticStyle: { "margin-top": "120px" }
-          },
-          [_vm._v(_vm._s(_vm.comercial.nombre))]
-        )
+        _c("h1", { staticClass: "text-center mb-5 mt-4" }, [
+          _vm._v(_vm._s(_vm.comercial.nombre))
+        ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "row align-items-start" }, [
-        _c("div", { staticClass: "col-md-7 order-1" }, [
-          _c("img", {
-            staticClass: "img-fluid",
-            attrs: {
-              src: "../storage/" + _vm.comercial.imagen_principal,
-              alt: "imagen comercial o establecimiento"
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c("aside", { staticClass: "col-md-5 order-2" }, [
-          _c("div", { staticClass: "p-4 bg-danger" }, [
+      _c(
+        "div",
+        { staticClass: "grid grid-cols-1 sm:grid-cols-3 gap-4" },
+        [
+          _c("div", { staticClass: "row-span-2" }, [
+            _c("img", {
+              staticClass: "img-fluid",
+              attrs: {
+                src: "../storage/" + _vm.comercial.imagen_principal,
+                alt: "imagen comercial o establecimiento"
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "bg-blueGray-400 p-3" }, [
             _c("h2", { staticClass: "text-center text-white mt-2 mb-4" }, [
               _vm._v("Descripcion")
             ]),
             _vm._v(" "),
             _c("p", { staticClass: "text-white mt-1" }, [
-              _c("br"),
               _vm._v(
-                "\n                  " +
+                "\n             " +
                   _vm._s(_vm.comercial.descripcion) +
-                  "\n              "
+                  "\n          "
               )
             ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "p-4 bg-dark" }, [
-            _c("div", { staticClass: "row form-group" }, [
-              _c("div", { staticClass: "col-sm text-white mt-1" }, [
-                _c("span", { staticClass: "font-weight-bold" }, [
-                  _vm._v(
-                    "\n                      Horario :\n                  "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("br"),
-                _vm._v(
-                  "\n                  " +
-                    _vm._s(_vm.comercial.apertura) +
-                    " - " +
-                    _vm._s(_vm.comercial.cierre) +
-                    "\n              "
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-sm text-white mt-1" }, [
-                _c("span", { staticClass: "font-weight-bold" }, [
-                  _vm._v(
-                    "\n                      Telefono :\n                  "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("br"),
-                _vm._v(
-                  "\n                  " +
-                    _vm._s(_vm.comercial.telefono) +
-                    "\n               "
-                )
-              ])
-            ])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("galeria-imagenes")
+          _c("galeria-imagenes")
+        ],
+        1
+      )
     ],
     1
   )
