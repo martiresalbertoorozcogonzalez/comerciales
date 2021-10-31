@@ -30,23 +30,26 @@
 
 <div id="app">    
 
-@if (session('estado'))
-<div class="alert alert-primary" role="alert">
-    {{ session('estado') }}
-</div>
-@endif
+    @if (session('estado'))
+    <div class="alert alert-primary" role="alert">
+        {{ session('estado') }}
+    </div>
+    @endif
+
+    {{-- Seccion header --}}
+    @include('inicio.partials.header')
 
 
-
-{{-- Seccion para el contenido de la pagina --}}
+    {{-- Seccion para el contenido de la pagina --}}
     @yield('content')
 
-{{-- Seccion del footer --}}
-@include('inicio.partials.footer')
+    {{-- Seccion del footer --}}
+    @include('inicio.partials.footer')
 
 </div>
 
 @yield('scripts')
+
 <script src="https://kit.fontawesome.com/504cecf7a8.js" crossorigin="anonymous"></script>
 
 

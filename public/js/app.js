@@ -2659,6 +2659,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   computed: {
@@ -2847,6 +2849,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MapaUbicacion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MapaUbicacion */ "./resources/js/components/MapaUbicacion.vue");
 /* harmony import */ var _GaleriaImagenes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GaleriaImagenes */ "./resources/js/components/GaleriaImagenes.vue");
+//
 //
 //
 //
@@ -53818,18 +53821,23 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("h2", { staticClass: "text-center text-3xl text-gray-900" }, [
-        _vm._v("Galeria imagenes")
-      ]),
-      _vm._v(" "),
+  return _c("div", { staticClass: "text-center" }, [
+    _c("h2", { staticClass: "text-center text-3xl text-gray-900" }, [
+      _vm._v("Galeria imagenes")
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass:
+          "grid grid-cols-1 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-4 items-center"
+      },
       _vm._l(_vm.imagenes, function(imagen) {
         return _c("div", { key: imagen.id }, [
           _c(
             "a",
             {
+              staticClass: "w-full",
               attrs: {
                 href: "/storage/" + imagen.ruta_imagen,
                 "data-lightbox": "imagenes",
@@ -53838,16 +53846,15 @@ var render = function() {
             },
             [
               _c("img", {
-                staticClass: "w-full p-3",
                 attrs: { src: "/storage/" + imagen.ruta_imagen, alt: "" }
               })
             ]
           )
         ])
-      })
-    ],
-    2
-  )
+      }),
+      0
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -54062,11 +54069,14 @@ var render = function() {
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "grid grid-cols-1 sm:grid-cols-3 gap-4" },
+        {
+          staticClass:
+            "grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-3"
+        },
         [
-          _c("div", { staticClass: "row-span-2" }, [
+          _c("div", { staticClass: "col-span-2" }, [
             _c("img", {
-              staticClass: "img-fluid",
+              staticClass: "w-full",
               attrs: {
                 src: "../storage/" + _vm.comercial.imagen_principal,
                 alt: "imagen comercial o establecimiento"
@@ -54074,7 +54084,7 @@ var render = function() {
             })
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "bg-blueGray-400 p-3" }, [
+          _c("div", { staticClass: "col-row-1 bg-blueGray-400 p-3 w-screem" }, [
             _c("h2", { staticClass: "text-center text-white mt-2 mb-4" }, [
               _vm._v("Descripcion")
             ]),
@@ -54088,9 +54098,8 @@ var render = function() {
             ])
           ]),
           _vm._v(" "),
-          _c("galeria-imagenes")
-        ],
-        1
+          _c("div", { staticClass: "col-span-2" }, [_c("galeria-imagenes")], 1)
+        ]
       )
     ],
     1
