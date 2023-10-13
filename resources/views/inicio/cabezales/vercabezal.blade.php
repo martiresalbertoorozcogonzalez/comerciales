@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 
-@section('content')
+@section('contenido')
 
 <div class="flex justify-self-start pl-28 text-center">
 	<a href="{{ url('/') }}" style="text-decoration:none;" class="boton-regresar">
