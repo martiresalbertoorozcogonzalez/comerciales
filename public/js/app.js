@@ -2792,6 +2792,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -53736,40 +53742,44 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "text-center" }, [
-    _c("h2", { staticClass: "text-center text-3xl text-gray-900" }, [
-      _vm._v("Galeria imagenes")
-    ]),
-    _vm._v(" "),
-    _c(
-      "div",
-      {
-        staticClass:
-          "grid grid-cols-1 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-4 items-center"
-      },
-      _vm._l(_vm.imagenes, function(imagen) {
-        return _c("div", { key: imagen.id }, [
-          _c(
-            "a",
-            {
-              staticClass: "w-full",
-              attrs: {
-                href: "/storage/" + imagen.ruta_imagen,
-                "data-lightbox": "imagenes",
-                "data-title": "Imagenes Comercial o establecimiento"
-              }
-            },
-            [
-              _c("img", {
-                attrs: { src: "/storage/" + imagen.ruta_imagen, alt: "" }
-              })
-            ]
-          )
-        ])
-      }),
-      0
-    )
-  ])
+  return _c(
+    "div",
+    { staticClass: "flex flex-col justify-center items-center py-18" },
+    [
+      _c("h2", { staticClass: "text-center text-3xl text-gray-900" }, [
+        _vm._v("Galeria imagenes")
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            "grid grid-cols-1 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-4 items-center"
+        },
+        _vm._l(_vm.imagenes, function(imagen) {
+          return _c("div", { key: imagen.id }, [
+            _c(
+              "a",
+              {
+                staticClass: "w-full",
+                attrs: {
+                  href: "/storage/" + imagen.ruta_imagen,
+                  "data-lightbox": "imagenes",
+                  "data-title": "Imagenes Comercial o establecimiento"
+                }
+              },
+              [
+                _c("img", {
+                  attrs: { src: "/storage/" + imagen.ruta_imagen, alt: "" }
+                })
+              ]
+            )
+          ])
+        }),
+        0
+      )
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -53875,54 +53885,107 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "div",
-    { staticClass: "container my-5" },
+    "section",
+    { staticClass: "text-gray-600 body-font overflow-hidden" },
     [
-      _c("center", [
-        _c("h1", { staticClass: "text-center mb-5 mt-4" }, [
-          _vm._v(_vm._s(_vm.comercial.nombre))
-        ])
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass:
-            "grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-3"
-        },
-        [
-          _c("div", { staticClass: "col-span-2" }, [
-            _c("img", {
-              staticClass: "w-full",
-              attrs: {
-                src: "../storage/" + _vm.comercial.imagen_principal,
-                alt: "imagen comercial o establecimiento"
-              }
-            })
-          ]),
+      _c("div", { staticClass: "container px-5 py-24 mx-auto" }, [
+        _c("div", { staticClass: "lg:w-4/3 mx-auto flex flex-wrap" }, [
+          _c("img", {
+            staticClass:
+              "lg:w-1/2 w-full lg:h-auto object-cover object-center rounded",
+            attrs: {
+              alt: "ecommerce",
+              src: "../storage/" + _vm.comercial.imagen_principal
+            }
+          }),
           _vm._v(" "),
-          _c("div", { staticClass: "col-row-1 bg-blueGray-400 p-3 w-screem" }, [
-            _c("h2", { staticClass: "text-center text-white mt-2 mb-4" }, [
-              _vm._v("Descripcion")
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "text-white mt-1" }, [
-              _vm._v(
-                "\n             " +
-                  _vm._s(_vm.comercial.descripcion) +
-                  "\n          "
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-span-2" }, [_c("galeria-imagenes")], 1)
-        ]
-      )
-    ],
-    1
+          _c(
+            "div",
+            { staticClass: "lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0" },
+            [
+              _c(
+                "h2",
+                {
+                  staticClass:
+                    "text-sm title-font text-gray-500 tracking-widest"
+                },
+                [_vm._v(_vm._s(_vm.comercial.categoria))]
+              ),
+              _vm._v(" "),
+              _c(
+                "h1",
+                {
+                  staticClass:
+                    "text-gray-900 text-3xl title-font font-medium mb-1"
+                },
+                [_vm._v(_vm._s(_vm.comercial.nombre))]
+              ),
+              _vm._v(" "),
+              _vm._m(0),
+              _vm._v(" "),
+              _c("p", { staticClass: "leading-relaxed" }, [
+                _vm._v(
+                  "Fam locavore kickstarter distillery. Mixtape chillwave tumeric sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo juiceramps cornhole raw denim forage brooklyn. Everyday carry +1 seitan poutine tumeric. Gastropub blue bottle austin listicle pour-over, neutra jean shorts keytar banjo tattooed umami cardigan."
+                )
+              ]),
+              _vm._v(" "),
+              _vm._m(1),
+              _vm._v(" "),
+              _c("div", { staticClass: "flex" }, [
+                _c(
+                  "span",
+                  {
+                    staticClass: "title-font font-medium text-2xl text-gray-900"
+                  },
+                  [_vm._v("Q" + _vm._s(_vm.comercial.precio_contado))]
+                ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass:
+                      "flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded"
+                  },
+                  [_vm._v("Button")]
+                )
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "col-span-3 mt-10" },
+          [_c("galeria-imagenes")],
+          1
+        )
+      ])
+    ]
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex mb-4" }, [
+      _c("h2", [_vm._v("Hola aca algo nuevo")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5"
+      },
+      [_c("div", [_c("h2", [_vm._v("Aca ira otra cosa")])])]
+    )
+  }
+]
 render._withStripped = true
 
 

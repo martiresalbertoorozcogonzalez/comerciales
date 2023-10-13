@@ -1,6 +1,6 @@
 <template>
 
-  <div class="text-center">
+  <div class="flex flex-col justify-center items-center py-18">
 
       <h2 class="text-center text-3xl text-gray-900">Galeria imagenes</h2>
          
